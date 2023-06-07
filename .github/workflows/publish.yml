@@ -1,8 +1,9 @@
 name: brew pr-pull
 on:
-  pull_request_review_comment:
-    types: [created]
-
+  push:
+    branches:
+      - main
+  pull_request:
 jobs:
   pr-pull:
     runs-on: ubuntu-22.04
