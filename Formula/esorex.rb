@@ -13,6 +13,7 @@ class Esorex < Formula
 
   depends_on "cpl"
   depends_on "gsl"
+  depends_on "libffi"
 
   def install
     system "./configure", "--disable-debug",
