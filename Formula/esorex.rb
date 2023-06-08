@@ -19,7 +19,8 @@ class Esorex < Formula
                           "--disable-silent-rules",
                           "--prefix=#{prefix}",
                           "--with-cpl=#{Formula["cpl"].prefix}",
-                          "--with-gsl=#{Formula["gsl"].prefix}"
+                          "--with-gsl=#{Formula["gsl"].prefix}",
+                          "--with-libffi=#{Formula["libffi"].prefix}"
     system "make", "install"
   end
 
