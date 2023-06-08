@@ -5,6 +5,9 @@ class Esorex < Formula
   sha256 "13cf719c5babbad3ee12d807676cd25df8bc84068b7f6f2179a56877ea7d47b4"
   license "GPL-2.0-or-later"
 
+  bottle do
+  end
+  
   depends_on "cpl"
   depends_on "gsl"
 
