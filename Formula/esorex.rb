@@ -6,8 +6,9 @@ class Esorex < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 ventura:       "a9ae578b05c3da46cedc07dd428d94a856aeae7f3ef80a0f405bf89b8cde893a"
-    sha256 x86_64_linux:  "5dc376aa20241233b76e2ec2c1d4e862443a0250916b2838a1ff871e8a6dc2c5"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esorex-3.13.7"
+    rebuild 1
+    sha256 ventura: "4e8f18f9d28564fd0d4339aae3284e4efd977dffd7bd9d3acc3b2274e9f3c377"
   end
 
   depends_on "cpl"
