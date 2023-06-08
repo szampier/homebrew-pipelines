@@ -18,4 +18,7 @@ class Esorex < Formula
     system "make", "install"
   end
 
+  test do
+    assert_equal "aaa", "aaa"
+  end
 end
