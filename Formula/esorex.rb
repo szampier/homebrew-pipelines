@@ -20,7 +20,8 @@ class Esorex < Formula
                           "--prefix=#{prefix}",
                           "--with-cpl=#{Formula["cpl"].prefix}",
                           "--with-gsl=#{Formula["gsl"].prefix}",
-                          "--with-libffi=#{Formula["libffi"].prefix}"
+                          "--with-libffi=#{Formula["libffi"].prefix}",
+                          "--with-included-ltdl"
     system "make", "install"
   end
 
