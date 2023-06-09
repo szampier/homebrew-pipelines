@@ -6,7 +6,10 @@ class Iiinstrument < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 ventura: "4e8f18f9d28564fd0d4339aae3284e4efd977dffd7bd9d3acc3b2274e9f3c377"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/iiinstrument-0.1.14.tar"
+    rebuild 2
+    sha256 cellar: :any,                 ventura:      "96915355cb559d7c15f696e111bd3a8f1c7fdeb17ab5ec166527ad37e54ecdfb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "6280e4e98fd49746b2995b526e1af06cc91de98136a6fae5ee57de23278e2877"
   end
 
   depends_on "cpl"
