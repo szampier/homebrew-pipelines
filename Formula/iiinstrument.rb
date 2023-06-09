@@ -10,13 +10,15 @@ class Iiinstrument < Formula
   end
 
   depends_on "cpl"
+  depends_on "gsl"
 
   def install
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--prefix=#{prefix}",
-                          "--with-cpl=#{Formula["cpl"].prefix}"
+                          "--with-cpl=#{Formula["cpl"].prefix}",
+                          "--with-gsl=#{Formula["gsl"].prefix}"
     system "make", "install"
   end
 
