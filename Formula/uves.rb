@@ -1,4 +1,4 @@
-class Iiinstrument < Formula
+class Uves < Formula
   desc "ESO uves instrument pipeline (recipe plugins)"
   homepage "http://www.eso.org/sci/software/pipelines/"
   url "https://github.com/szampier/homebrew-pipelines/blob/main/src/uves-6.1.12.tar.gz?raw=true"
