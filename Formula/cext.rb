@@ -6,10 +6,11 @@ class Cext < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 ventura:      "85a102b0cb8bd26f0d4f2423aea9875a8863ce8496cbf4a61873ae097ac45dd9"
-    sha256 cellar: :any,                 monterey:     "5e6cb9e560709eed6a1eed5d72494ff52e97f6ee5104146804ba34debb8e05c7"
-    sha256 cellar: :any,                 big_sur:      "5951b0e7355699ac17c8299ce0bd08e1e2d77f3cc079dbc05d1d5a4cadea26f5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "78115add990d1bbfb09f5bf2e6f8eb6e718bf0b654c10e78617d9c5e74be79da"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/cext-1.2.6"
+    sha256 cellar: :any,                 ventura:      "e7c7326683df4e360a8c3a492dbb7c6318cd6d98c6e8b14cf27942bc3bc951ad"
+    sha256 cellar: :any,                 monterey:     "0cb11167c76aac6f71c5d9d0cdeaf81231bb9466a949b2596fb73812d5177299"
+    sha256 cellar: :any,                 big_sur:      "3a8fe0eee8a22a291d1f0274ab5862e0527e26e1bf2a555174b739ad815b3aa8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "b4de6da40d4e57adfdf9c1955ffd59cb10c619a406ff0a813e121ae3575e0e59"
   end
 
   def install
