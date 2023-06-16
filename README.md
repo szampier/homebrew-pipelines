@@ -9,6 +9,7 @@ Or `brew tap szampier/tap` and then `brew install <formula>`.
 ### Formulae
 * esorex
 * iiinstrument
+* uves
 
 ## Documentation
 
