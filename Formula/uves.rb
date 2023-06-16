@@ -13,10 +13,10 @@ class Uves < Formula
   end
 
   depends_on "cpl"
+  depends_on "curl"
   depends_on "erfa"
   depends_on "gsl"
   depends_on "pkg-config"
-  depends_on "curl-openssl"
 
   # Fix -flat_namespace being used on Big Sur and later.
   patch do
@@ -28,7 +28,8 @@ class Uves < Formula
     system "./configure", "--prefix=#{prefix}",
                           "--with-cpl=#{Formula["cpl"].prefix}",
                           "--with-gsl=#{Formula["gsl"].prefix}",
-                          "--with-erfa=#{Formula["erfa"].prefix}"
+                          "--with-erfa=#{Formula["erfa"].prefix}",
+                          "--with-curl=#{Formula["curl"].prefix}"
     system "make", "install"
   end
 
