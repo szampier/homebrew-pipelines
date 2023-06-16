@@ -6,10 +6,11 @@ class Erfa < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 ventura:      "e2f1dba92d763e4117bbe581b82369b52005ec5f1fba784b9c3bcbb14e48ee1b"
-    sha256 monterey:     "e15e31be78c15590f56e7267b87a1a4e0450b3c9334e217a0c55506e42191c47"
-    sha256 big_sur:      "a13636407848ab98be40d078193f11e14524955f95f4a33f8e488dc160ce0dff"
-    sha256 x86_64_linux: "e574c087e4e535910f86134e912d01adfa0eba8b9c51cbb8fb7b57d1df984607"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/erfa-2.0.0"
+    sha256 cellar: :any,                 ventura:      "85a102b0cb8bd26f0d4f2423aea9875a8863ce8496cbf4a61873ae097ac45dd9"
+    sha256 cellar: :any,                 monterey:     "5e6cb9e560709eed6a1eed5d72494ff52e97f6ee5104146804ba34debb8e05c7"
+    sha256 cellar: :any,                 big_sur:      "5951b0e7355699ac17c8299ce0bd08e1e2d77f3cc079dbc05d1d5a4cadea26f5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "78115add990d1bbfb09f5bf2e6f8eb6e718bf0b654c10e78617d9c5e74be79da"
   end
 
   def install
