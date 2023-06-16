@@ -12,7 +12,6 @@ class Uves < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "339a5d3d4e572ed6fb1f46f1001f77a2d79ee6b871f39f7faa63abe2ff2bff2b"
   end
 
-  depends_on "cext"
   depends_on "cpl"
   depends_on "erfa"
   depends_on "gsl"
@@ -27,7 +26,6 @@ class Uves < Formula
     system "./configure", "--prefix=#{prefix}",
                           "--with-cpl=#{Formula["cpl"].prefix}",
                           "--with-gsl=#{Formula["gsl"].prefix}",
-                          "--with-cext=#{Formula["cext"].prefix}",
                           "--with-erfa=#{Formula["erfa"].prefix}"
     system "make", "install"
   end
