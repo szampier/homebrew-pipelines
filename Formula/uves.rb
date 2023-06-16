@@ -1,6 +1,6 @@
 class Uves < Formula
   desc "ESO UVES recipe plugins"
-  homepage "http://www.eso.org/sci/software/pipelines/"
+  homepage "https://www.eso.org/public/"
   url "https://github.com/szampier/homebrew-pipelines/blob/main/src/uves-6.3.1.tar.gz?raw=true"
   sha256 "8a7086ab32d0ae7a134664c8f4c21b5dd48cf27fba69cd47be006b35e92efca7"
   license "GPL-2.0-or-later"
