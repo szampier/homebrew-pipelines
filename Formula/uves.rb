@@ -15,6 +15,7 @@ class Uves < Formula
   depends_on "cpl"
   depends_on "erfa"
   depends_on "gsl"
+  depends_on "pkg-config"
 
   # Fix -flat_namespace being used on Big Sur and later.
   patch do
