@@ -7,11 +7,11 @@ class Esorex < Formula
 
   bottle do
     root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esorex-3.13.7"
-    rebuild 3
-    sha256 ventura:      "e2f1dba92d763e4117bbe581b82369b52005ec5f1fba784b9c3bcbb14e48ee1b"
-    sha256 monterey:     "e15e31be78c15590f56e7267b87a1a4e0450b3c9334e217a0c55506e42191c47"
-    sha256 big_sur:      "a13636407848ab98be40d078193f11e14524955f95f4a33f8e488dc160ce0dff"
-    sha256 x86_64_linux: "e574c087e4e535910f86134e912d01adfa0eba8b9c51cbb8fb7b57d1df984607"
+    rebuild 4
+    sha256 ventura:      "d5ca0af396682e4b4a1c0ecbb7bd130269f17bd6f446899b2b12f8aaf518f3c7"
+    sha256 monterey:     "2488006ec3021f3943a8969786a89e0ee7d147cfdd3ea3586e915e06a41f3c7c"
+    sha256 big_sur:      "2ddea4928083b869d75bde773258498c4698730d727032d10d1fed64486b81e9"
+    sha256 x86_64_linux: "5b975a79239875b28552671869e4f1f82e5226e7f5bbb97d91947af05b42cee4"
   end
 
   depends_on "cpl"
