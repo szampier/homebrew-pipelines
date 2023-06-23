@@ -28,6 +28,7 @@ class Esorex < Formula
                           "--with-libffi=#{Formula["libffi"].prefix}",
                           "--with-included-ltdl"
     system "make", "install"
+    inreplace prefix/"etc/esorex.rc", prefix/"lib/esopipes-plugins", HOMEBREW_PREFIX/"lib/esopipes-plugins"
   end
 
   test do
