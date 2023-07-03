@@ -5,9 +5,15 @@ class Muse < Formula
   sha256 "2884204f395813131ac11af63a19c03ec8747051286392c39d03f2d11bc94917"
   license "GPL-2.0-or-later"
 
+  livecheck do
+    url :homepage
+    regex(/href=.*?muse[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
   depends_on "cpl"
   depends_on "curl"
   depends_on "erfa"
+  depends_on "esorex"
   depends_on "gsl"
   depends_on "pkg-config"
 
@@ -24,6 +30,6 @@ class Muse < Formula
   end
 
   test do
-    assert_equal "aaa", "aaa"
+    system "esorex", "--man-page", "muse_bias"
   end
 end
