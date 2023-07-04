@@ -11,7 +11,7 @@ class Muse < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 ventura:      "30a18fc0da532a36d2246c49fe86dbfde8e8a51ae1849970ba70b7588ea231e0"
+    sha256 cellar: :any,                 ventura:      "d5ca0af396682e4b4a1c0ecbb7bd130269f17bd6f446899b2b12f8aaf518f3c7"
     sha256 cellar: :any,                 monterey:     "7150f8de6020c63aaf246824925c4a6e8d32df11d7dbb9b417bb8ddb4554b0c3"
     sha256 cellar: :any,                 big_sur:      "8a168bb3fa40cf3bf0cd2c91d4e0cc50f46d44d5a0d730e4f57d2f7478fce321"
     sha256 cellar: :any_skip_relocation, x86_64_linux: "35560a2607e679b5b03de4dfcbc826c9d42957b74a1fb3216617e47bbd42809a"
