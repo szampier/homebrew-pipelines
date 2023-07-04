@@ -11,10 +11,11 @@ class Iiinstrument < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 ventura:      "1fe604a4d4526610a5d29cb9ffda082d4dfb03f04f150c3fc8e8273263d5a9a7"
-    sha256 cellar: :any,                 monterey:     "54b8ee304c8b51ec68812e18a5ed111568f3e70f9ae1a1519e8a9244f2c9b59f"
-    sha256 cellar: :any,                 big_sur:      "239684e1d8cf687d639e9c8e033ca629be39a0f4256fc4ade7800606cd7bad46"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "339a5d3d4e572ed6fb1f46f1001f77a2d79ee6b871f39f7faa63abe2ff2bff2b"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/iiinstrument-0.1.14-16"
+    sha256 cellar: :any,                 ventura:      "f6a72a852a8b1ce76c04e0ff2cfab661ec339f578f1296936fa6d9c5238c3844"
+    sha256 cellar: :any,                 monterey:     "c14369881af7326b264758b2f229684c47321a0fdcbbaeaf575b566fb305a7ee"
+    sha256 cellar: :any,                 big_sur:      "3d191498ad6bdd734f97e375cf93635159aa7329122af9af31fdf166e7c1b026"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "0b1ec8a50756da676a3adc819c4cdd3224b58816ef48bca953e6423e4d608492"
   end
 
   depends_on "cpl"
