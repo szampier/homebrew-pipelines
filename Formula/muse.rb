@@ -7,7 +7,7 @@ class Muse < Formula
 
   livecheck do
     url :homepage
-    regex(/href=.*?muse-kit-(\d+(?:[-\.]\d+)+)\.t/i)
+    regex(/href=.*?muse-kit-(\d+(?:[.-]\d+)+)\.t/i)
   end
 
   depends_on "cpl"
