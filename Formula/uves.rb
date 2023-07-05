@@ -11,10 +11,12 @@ class Uves < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 ventura:      "d5ca0af396682e4b4a1c0ecbb7bd130269f17bd6f446899b2b12f8aaf518f3c7"
-    sha256 cellar: :any,                 monterey:     "7150f8de6020c63aaf246824925c4a6e8d32df11d7dbb9b417bb8ddb4554b0c3"
-    sha256 cellar: :any,                 big_sur:      "8a168bb3fa40cf3bf0cd2c91d4e0cc50f46d44d5a0d730e4f57d2f7478fce321"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "35560a2607e679b5b03de4dfcbc826c9d42957b74a1fb3216617e47bbd42809a"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/uves-6.1.12-1"
+    rebuild 1
+    sha256 cellar: :any,                 ventura:      "a1451c4858bdc47ffc73ccebda98b39e031e811ea47dcc5e21b8b7deb8a946ae"
+    sha256 cellar: :any,                 monterey:     "13ea703b82de3b7c5c3072ec6f52a5c0cc35b9f5809f368e23ebb6e678c6ee33"
+    sha256 cellar: :any,                 big_sur:      "aa0123c648737ffbfee4156bfcc6cf5bb6519dee2c50e3e25eaf540e0fd52902"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "22f378c5e13a2951e8f0b53df5cbbcc4c9fb209410ed2c77311d57afec2df1b3"
   end
 
   depends_on "cpl"
