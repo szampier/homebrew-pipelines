@@ -6,10 +6,11 @@ class Telluriccorr < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 ventura:      "e7c7326683df4e360a8c3a492dbb7c6318cd6d98c6e8b14cf27942bc3bc951ad"
-    sha256 cellar: :any,                 monterey:     "0cb11167c76aac6f71c5d9d0cdeaf81231bb9466a949b2596fb73812d5177299"
-    sha256 cellar: :any,                 big_sur:      "3a8fe0eee8a22a291d1f0274ab5862e0527e26e1bf2a555174b739ad815b3aa8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "b4de6da40d4e57adfdf9c1955ffd59cb10c619a406ff0a813e121ae3575e0e59"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/telluriccorr-4.3.1"
+    sha256 ventura:      "f229d1f1ec1c6e44f0d4c4d953405959450a9a906925382b94c348433d04fae1"
+    sha256 monterey:     "002597a7681b3b55523e9e78ab6f1230cad832d7482c9f881e7f81bcfed944e1"
+    sha256 big_sur:      "60de2cdd8378fc714b128bc1c28e575952ffe256002a2a6cb0b311acef7c5c29"
+    sha256 x86_64_linux: "e1df03a214fc32e72064ad4bc1a1a1ba2aaff85332a65d9c83344db15effa7c0"
   end
 
   depends_on "cpl"
