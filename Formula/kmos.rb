@@ -1,8 +1,8 @@
 class Kmos < Formula
   desc "ESO KMOS recipe plugins"
   homepage "https://www.eso.org/sci/software/pipelines/"
-  url "https://ftp.eso.org/pub/dfs/pipelines/instruments/kmos/kmos-kit-4.1.1-1.tar.gz"
-  sha256 "8db6952f019d964a0b468cfa0770af0976f89ee179ce3e956e524bee9ee291f1"
+  url "https://ftp.eso.org/pub/dfs/pipelines/instruments/kmos/kmos-kit-4.1.1-2.tar.gz"
+  sha256 "51e67ccacf2b8f545e4942cf47033a69f5c4b6b71adfcfcd13a323b9e2701f6f"
   license "GPL-2.0-or-later"
 
   livecheck do
