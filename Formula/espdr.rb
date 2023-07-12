@@ -11,10 +11,11 @@ class Espdr < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 ventura:      "a1451c4858bdc47ffc73ccebda98b39e031e811ea47dcc5e21b8b7deb8a946ae"
-    sha256 cellar: :any,                 monterey:     "13ea703b82de3b7c5c3072ec6f52a5c0cc35b9f5809f368e23ebb6e678c6ee33"
-    sha256 cellar: :any,                 big_sur:      "aa0123c648737ffbfee4156bfcc6cf5bb6519dee2c50e3e25eaf540e0fd52902"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "22f378c5e13a2951e8f0b53df5cbbcc4c9fb209410ed2c77311d57afec2df1b3"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/espdr-3.0.0-12"
+    sha256 ventura:      "475b8dd4c728baf7f5d211520ba35d6bb93d3543220e7262d19fbb57fc50869c"
+    sha256 monterey:     "c711771c69a72303ed324a181b766ccaef847257e5020be045aa3ca41ffb4e96"
+    sha256 big_sur:      "bf8da2def2e76f2455b496ca8b20117989b9eb92f3ccc71e125b7cbd24a94dbf"
+    sha256 x86_64_linux: "47ab59be6d216959735b4792d1cc6a95c84e25f545d09250690457470b515b4f"
   end
 
   depends_on "cpl"
