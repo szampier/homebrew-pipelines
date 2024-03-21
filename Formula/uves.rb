@@ -1,8 +1,8 @@
 class Uves < Formula
   desc "ESO UVES recipe plugins"
   homepage "https://www.eso.org/sci/software/pipelines/"
-  url "https://ftp.eso.org/pub/dfs/pipelines/instruments/uves/uves-kit-6.4.1.tar.gz"
-  sha256 "6914c994aa9170d5b2a05622f8beb8c3ef0014e18cd0408530765b7ec321a142"
+  url "https://ftp.eso.org/pub/dfs/pipelines/instruments/uves/uves-kit-6.4.1-1.tar.gz"
+  sha256 "b801adb7ad804fe8b097fd29caaf04ebd3d61beaaabb902e2fa37330f471a4b1"
   license "GPL-2.0-or-later"
 
   livecheck do
