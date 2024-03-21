@@ -26,8 +26,8 @@ class Iiinstrument < Formula
     system "tar", "xf", "iiinstrument-0.1.14.tar.gz"
     cd "iiinstrument-0.1.14" do
       # Fix -flat_namespace being used on Big Sur and later.
-      system "curl", "-O", "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
-      system "patch", "configure", "configure-big_sur.diff"
+      # system "curl", "-O", "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
+      # system "patch", "configure", "configure-big_sur.diff"
       system "./configure", "--disable-debug",
                             "--disable-dependency-tracking",
                             "--disable-silent-rules",
