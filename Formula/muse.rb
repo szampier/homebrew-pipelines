@@ -11,12 +11,11 @@ class Muse < Formula
   end
 
   bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/muse-2.8.9-1"
-    rebuild 1
-    sha256 cellar: :any,                 ventura:      "7a7ed36776753d632fcdfb0dce07cc189fc9ccda0ee42a6ea17ed1504efbdcdb"
-    sha256 cellar: :any,                 monterey:     "7ac3b45445dee5828c7f477e367fa4e1c8fee1a7f0463e0faff26547c6e460eb"
-    sha256 cellar: :any,                 big_sur:      "cc13a9953c37c59578219976022067984de8f3926da54e143f1830d9439d52f6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "b5e9dc8a57f543d673f1d8dc0a3697da8d50ac7944220fc7d9accd52078af7da"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/muse-2.8.9-2"
+    sha256 cellar: :any,                 arm64_ventura: "3bba9e3bf91e52e14a0d3dda696f6bc99fa8c08da53424bd867d5902ac8c58db"
+    sha256 cellar: :any,                 ventura:       "65a8cca101bdc35165e5e0241776b1eca6ba2218365e3af0dd7dbc15ff9f2846"
+    sha256 cellar: :any,                 monterey:      "71493a96a73676e444cd5ae5b2c2884404936c2a9810c9eb61b8cd510831d7b3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5d315e40f66e30f7e7bfa4de66d7932235d8a2c1ba43b0151da7377b2589e935"
   end
 
   depends_on "cpl"
