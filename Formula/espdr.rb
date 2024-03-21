@@ -11,7 +11,7 @@ class Espdr < Formula
   end
 
   bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/espdr-3.0.0-12"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/espdr-3.1.0-12"
     sha256 ventura:      "475b8dd4c728baf7f5d211520ba35d6bb93d3543220e7262d19fbb57fc50869c"
     sha256 monterey:     "c711771c69a72303ed324a181b766ccaef847257e5020be045aa3ca41ffb4e96"
     sha256 big_sur:      "bf8da2def2e76f2455b496ca8b20117989b9eb92f3ccc71e125b7cbd24a94dbf"
@@ -26,8 +26,8 @@ class Espdr < Formula
   depends_on "pkg-config"
 
   def install
-    system "tar", "xf", "espdr-3.0.0.tar.gz"
-    cd "espdr-3.0.0" do
+    system "tar", "xf", "espdr-3.1.0.tar.gz"
+    cd "espdr-3.1.0" do
       system "./configure", "--prefix=#{prefix}",
                             "--with-cpl=#{Formula["cpl"].prefix}",
                             "--with-gsl=#{Formula["gsl"].prefix}",
