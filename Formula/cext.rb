@@ -4,6 +4,7 @@ class Cext < Formula
   url "https://ftp.eso.org/pub/dfs/pipelines/libraries/cext/cext-1.2.6.tar.gz"
   sha256 "9dea2d70f2532c975fd0cfebc6e0b96ca8aa7703d39f482c6468991078821b0c"
   license "GPL-2.0-or-later"
+  revision 1
 
   bottle do
     root_url "https://github.com/szampier/homebrew-pipelines/releases/download/cext-1.2.6"
