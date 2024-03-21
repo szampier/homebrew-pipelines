@@ -4,6 +4,7 @@ class Esorex < Formula
   url "https://ftp.eso.org/pub/dfs/pipelines/libraries/esorex/esorex-3.13.7.tar.gz"
   sha256 "13cf719c5babbad3ee12d807676cd25df8bc84068b7f6f2179a56877ea7d47b4"
   license "GPL-2.0-or-later"
+  revision 1
 
   bottle do
     root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esorex-3.13.7"
