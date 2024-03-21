@@ -27,8 +27,8 @@ class Uves < Formula
   depends_on "pkg-config"
 
   def install
-    system "tar", "xf", "uves-6.1.12.tar.gz"
-    cd "uves-6.1.12" do
+    system "tar", "xf", "uves-6.4.1.tar.gz"
+    cd "uves-6.4.1" do
       # Fix -flat_namespace being used on Big Sur and later.
       system "curl", "-O", "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
       system "patch", "configure", "configure-big_sur.diff"
