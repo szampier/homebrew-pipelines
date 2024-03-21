@@ -7,11 +7,12 @@ class Cext < Formula
   revision 1
 
   bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/cext-1.2.6"
-    sha256 cellar: :any,                 ventura:      "e7c7326683df4e360a8c3a492dbb7c6318cd6d98c6e8b14cf27942bc3bc951ad"
-    sha256 cellar: :any,                 monterey:     "0cb11167c76aac6f71c5d9d0cdeaf81231bb9466a949b2596fb73812d5177299"
-    sha256 cellar: :any,                 big_sur:      "3a8fe0eee8a22a291d1f0274ab5862e0527e26e1bf2a555174b739ad815b3aa8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "b4de6da40d4e57adfdf9c1955ffd59cb10c619a406ff0a813e121ae3575e0e59"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/cext-1.2.6_1"
+    sha256 cellar: :any,                 arm64_ventura: "a80d27476ee4e943e2d0c6d58b9e3efdfb15207ced55230d4b4b50b23032e42d"
+    sha256 cellar: :any,                 ventura:       "9e99d65aa041fb148fd1aa7afda9a72e57c135faa923304d708c69d6c68f51d0"
+    sha256 cellar: :any,                 monterey:      "b30e1a6a35794a3d95d705da7c65da6be6fe673db927494543baa1a72b26580f"
+    sha256 cellar: :any,                 big_sur:       "119238b1b41cc05bb78bbd0f91e53536ff7cba52c6fd9f87fc8819f94a10b004"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "864dd3cef7c0650ceea0a02c2c67dcbd3f3ce3998fa47402ac59d82659a6e0da"
   end
 
   def install
