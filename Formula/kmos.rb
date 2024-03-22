@@ -11,11 +11,11 @@ class Kmos < Formula
   end
 
   bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/kmos-4.4.2-2"
-    sha256 cellar: :any,                 ventura:      "5cc566087e8c5c8b999e2476d0e3746b628720fb02800252e1e0e13294890087"
-    sha256 cellar: :any,                 monterey:     "8fc421b61809250e54780921002a96a5c8d766daf075231ca5ebe84979522a23"
-    sha256 cellar: :any,                 big_sur:      "b27b69e6dba171d243105d457fccb00cdec0d6045300fc3d05bb6098760e65dd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "cf42b70821fbd65b86f279ba3beb0c7f8cfd28f54bd7e0668d67137562c572f9"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/kmos-4.4.2-1"
+    sha256 cellar: :any,                 arm64_sonoma: "7ee7cef487b85d7c5beaacaf462dabc1a1a4867ad0a3d98256cda0cf14ac9bec"
+    sha256 cellar: :any,                 ventura:      "d594a83560f183f6e3e42b2b4e36d32ee67afe2cfa530b27ed6bd413f21e18fc"
+    sha256 cellar: :any,                 monterey:     "87ed260164cce1649f62c7f4d3e1fc3b622d3594fc1cdc4f995b1f118de6587d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "32281b71aabbfa9a63ef78bed8e0d43812a9172c94a5a6e00f440c6b2116750f"
   end
 
   depends_on "cpl"
