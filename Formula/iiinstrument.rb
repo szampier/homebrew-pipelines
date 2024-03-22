@@ -1,7 +1,7 @@
 class Iiinstrument < Formula
   desc "ESO example template instrument pipeline (recipe plugins)"
   homepage "https://www.eso.org/sci/software/pipelines/"
-  url "https://ftp.eso.org/pub/dfs/pipelines/instruments/iiinstrument/iiinstrument-kit-0.1.14-22.tar.gz"
+  url "https://ftp.eso.org/pub/dfs/pipelines/instruments/iiinstrument/iiinstrument-kit-0.1.14-23.tar.gz"
   sha256 "03eddcb36174615e43d0f6733b6fce30ce1507bfe2da3e091b7fe12410ecf692"
   license "GPL-2.0-or-later"
 
@@ -11,7 +11,7 @@ class Iiinstrument < Formula
   end
 
   bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/iiinstrument-0.1.14-22"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/iiinstrument-0.1.14-23"
     sha256 cellar: :any,                 arm64_ventura: "c1053986816210ac4922d32ed4de77588b526b6b1f45c3470e1dc1db3857f6e0"
     sha256 cellar: :any,                 ventura:       "55047c558607e840d29a871c8f386d44a7f2703a7c4b74eb21efb4234298300d"
     sha256 cellar: :any,                 monterey:      "812b3e5865f36e4889b1325c982dbacb41f6ec4ebe1736bdefc662001aac102c"
