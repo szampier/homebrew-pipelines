@@ -2,7 +2,7 @@ class Iiinstrument < Formula
   desc "ESO example template instrument pipeline (recipe plugins)"
   homepage "https://www.eso.org/sci/software/pipelines/"
   url "https://ftp.eso.org/pub/dfs/pipelines/instruments/iiinstrument/iiinstrument-kit-0.1.14-23.tar.gz"
-  sha256 "03eddcb36174615e43d0f6733b6fce30ce1507bfe2da3e091b7fe12410ecf692"
+  sha256 "f3b1f23a47ac572265f90422b03ef3cda6e39fd313c1dfaecc85e4f673ef474e"
   license "GPL-2.0-or-later"
 
   livecheck do
