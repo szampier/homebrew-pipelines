@@ -4,6 +4,7 @@ class Espdr < Formula
   url "https://ftp.eso.org/pub/dfs/pipelines/instruments/espresso/espdr-kit-3.1.0-1.tar.gz"
   sha256 "f11bc1b0e05d07b6681aff7779f43686538288ba0fefb16afb2fd8d01a91a015"
   license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url :homepage
