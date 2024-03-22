@@ -7,11 +7,12 @@ class Telluriccorr < Formula
   revision 2
 
   bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/telluriccorr-4.3.1_1"
-    sha256 arm64_ventura: "28e60df88a6a05ef5b0db207eaa5e9cbfa52bcf9cfed1fd35dcab547f547df0a"
-    sha256 ventura:       "23f17c1e309ada9a922979e732b4594547271f43bf792ed1031ac8c481a427d7"
-    sha256 monterey:      "63d972a4d87ea12c03c944582eafede4ac36334cbe6e0437597d3fcb2401588d"
-    sha256 x86_64_linux:  "ac02aac660bc5a405be4078288a66d1d3dacd1d2c93d3c04d39e56f68a6c2017"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/telluriccorr-4.3.1_2"
+    sha256 arm64_sonoma:  "0b239e9eec40ea079d2733c765d94449f0e061e14b0501dd073edf49a05fccf6"
+    sha256 arm64_ventura: "07fc9b3b18ccb2de073210bdd3a5547d22e2265567fd9c98cbad2d00c65d35a9"
+    sha256 ventura:       "f26ce0a5f864d0663ce71d0689d4f64090a831cf69cba72ef34b66c0d6ddd655"
+    sha256 monterey:      "8dd68570f0efd1d4f7aaa8aa8bb2e3aace9d0387ecd81a719f31f0303dc9176a"
+    sha256 x86_64_linux:  "e3b85db7485f588428bd854dd45cd3d7b066df723bc8dd8b2fe1eb63af5e915a"
   end
 
   depends_on "cpl"
