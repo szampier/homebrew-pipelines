@@ -11,7 +11,7 @@ class Kmos < Formula
   end
 
   bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/kmos-4.1.1-2"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/kmos-4.4.2-2"
     sha256 cellar: :any,                 ventura:      "5cc566087e8c5c8b999e2476d0e3746b628720fb02800252e1e0e13294890087"
     sha256 cellar: :any,                 monterey:     "8fc421b61809250e54780921002a96a5c8d766daf075231ca5ebe84979522a23"
     sha256 cellar: :any,                 big_sur:      "b27b69e6dba171d243105d457fccb00cdec0d6045300fc3d05bb6098760e65dd"
@@ -24,8 +24,8 @@ class Kmos < Formula
   depends_on "telluriccorr"
 
   def install
-    system "tar", "xf", "kmos-4.1.1.tar.gz"
-    cd "kmos-4.1.1" do
+    system "tar", "xf", "kmos-4.4.2.tar.gz"
+    cd "kmos-4.4.2" do
       # Fix -flat_namespace being used on Big Sur and later.
       system "curl", "-O", "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
       system "patch", "configure", "configure-big_sur.diff"
