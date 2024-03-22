@@ -4,6 +4,7 @@ class Muse < Formula
   url "https://ftp.eso.org/pub/dfs/pipelines/instruments/muse/muse-kit-2.8.9-2.tar.gz"
   sha256 "2a95fe6b90b9829218f295d2d73daa14691d00618679d904f83fac25f8e5948d"
   license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url :homepage
