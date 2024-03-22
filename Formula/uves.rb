@@ -4,6 +4,7 @@ class Uves < Formula
   url "https://ftp.eso.org/pub/dfs/pipelines/instruments/uves/uves-kit-6.4.1-1.tar.gz"
   sha256 "b801adb7ad804fe8b097fd29caaf04ebd3d61beaaabb902e2fa37330f471a4b1"
   license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url :homepage
