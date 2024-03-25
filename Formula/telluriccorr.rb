@@ -6,6 +6,11 @@ class Telluriccorr < Formula
   license "GPL-2.0-or-later"
   revision 2
 
+  livecheck do
+    url "https://ftp.eso.org/pub/dfs/pipelines/libraries/telluriccorr/"
+    regex(/href=.*?telluriccorr[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
   bottle do
     root_url "https://github.com/szampier/homebrew-pipelines/releases/download/telluriccorr-4.3.1_2"
     sha256 arm64_sonoma:  "0b239e9eec40ea079d2733c765d94449f0e061e14b0501dd073edf49a05fccf6"
