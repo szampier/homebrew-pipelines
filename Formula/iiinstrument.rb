@@ -2,7 +2,6 @@ class Iiinstrument < Formula
   desc "ESO example template instrument pipeline (recipe plugins)"
   homepage "https://www.eso.org/sci/software/pipelines/"
   url "https://ftp.eso.org/pub/dfs/pipelines/instruments/iiinstrument/iiinstrument-kit-0.1.14-27.tar.gz"
-  version "0.1.14"
   sha256 "8b281fab3de19c38dfac76e43c3f40b64be26e884d5883afbd051018b8983a9a"
   license "GPL-2.0-or-later"
 
@@ -25,8 +24,9 @@ class Iiinstrument < Formula
   depends_on "gsl"
 
   def install
-    system "tar", "xf", "iiinstrument-#{version}.tar.gz"
-    cd "iiinstrument-#{version}" do
+    version_norevision = version[/(\d+(?:[.]\d+)+)/i, 1]
+    system "tar", "xf", "iiinstrument-#{version_norevision}.tar.gz"
+    cd "iiinstrument-#{version_norevision}" do
       # Fix -flat_namespace being used on Big Sur and later.
       system "curl", "-O", "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
       system "patch", "configure", "configure-big_sur.diff"
