@@ -24,7 +24,7 @@ class Iiinstrument < Formula
   depends_on "gsl"
 
   def install
-    version_norevision = version.version[/(\d+(?:[.]\d+)+)/i, 1]
+    version_norevision = version.to_s[/(\d+(?:[.]\d+)+)/i, 1]
     system "tar", "xf", "iiinstrument-#{version_norevision}.tar.gz"
     cd "iiinstrument-#{version_norevision}" do
       # Fix -flat_namespace being used on Big Sur and later.
