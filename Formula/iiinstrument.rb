@@ -24,7 +24,7 @@ class Iiinstrument < Formula
   depends_on "gsl"
 
   def install
-    version = url[/.*-kit-(\d+(?:[.]\d+)+)/i, 1]
+    # version = url[/.*-kit-(\d+(?:[.]\d+)+)/i, 1]
     system "tar", "xf", "iiinstrument-#{version}.tar.gz"
     cd "iiinstrument-#{version}" do
       # Fix -flat_namespace being used on Big Sur and later.
