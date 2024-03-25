@@ -6,6 +6,11 @@ class Esorex < Formula
   license "GPL-2.0-or-later"
   revision 2
 
+  livecheck do
+    url "https://ftp.eso.org/pub/dfs/pipelines/libraries/esorex/"
+    regex(/href=.*?esorex[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
   bottle do
     root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esorex-3.13.7_2"
     sha256 arm64_sonoma:  "5ff1675b9a795a74ea28cce93356687d864fe724fdfde71443829459aa74a77a"

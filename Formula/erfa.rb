@@ -6,6 +6,11 @@ class Erfa < Formula
   license "GPL-2.0-or-later"
   revision 1
 
+  livecheck do
+    url "https://ftp.eso.org/pub/dfs/pipelines/libraries/erfa/"
+    regex(/href=.*?erfa[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
   bottle do
     root_url "https://github.com/szampier/homebrew-pipelines/releases/download/erfa-2.0.1_1"
     sha256 cellar: :any,                 arm64_sonoma:  "e3c82f4a56c0b19d16dbb11f2a70a22a4c1277200af6b333c9bed1dc2d8f634e"

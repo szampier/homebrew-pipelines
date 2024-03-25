@@ -6,6 +6,11 @@ class Cext < Formula
   license "GPL-2.0-or-later"
   revision 2
 
+  livecheck do
+    url "https://ftp.eso.org/pub/dfs/pipelines/libraries/cext/"
+    regex(/href=.*?cext[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
   bottle do
     root_url "https://github.com/szampier/homebrew-pipelines/releases/download/cext-1.2.6_2"
     sha256 cellar: :any,                 arm64_sonoma:  "40996fd48597ae06b2da85dc7e69bb8de9ddcb641200f0d1fc864a190469c269"
