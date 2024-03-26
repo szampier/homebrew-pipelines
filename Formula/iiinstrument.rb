@@ -41,6 +41,6 @@ class Iiinstrument < Formula
   end
 
   test do
-    assert_match "rrrecipe -- version #{version}", shell_output("#{bin}/esorex --man-page rrrecipe")
+    assert_match "rrrecipe -- version #{version}", shell_output("#{HOMEBREW_PREFIX}/bin/esorex --man-page rrrecipe")
   end
 end

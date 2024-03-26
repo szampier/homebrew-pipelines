@@ -43,6 +43,6 @@ class Uves < Formula
   end
 
   test do
-    assert_match "uves_cal_mbias -- version #{version}", shell_output("#{bin}/esorex --man-page uves_cal_mbias")
+    assert_match "uves_cal_mbias -- version #{version}", shell_output("#{HOMEBREW_PREFIX}/bin/esorex --man-page uves_cal_mbias")
   end
 end
