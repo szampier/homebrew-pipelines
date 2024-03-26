@@ -37,6 +37,6 @@ class Esorex < Formula
   end
 
   test do
-    assert_equal "aaa", "aaa"
+    assert_match "ESO Recipe Execution Tool, version #{version}", shell_output("#{bin}/esorex --version")
   end
 end
