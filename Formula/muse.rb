@@ -43,6 +43,7 @@ class Muse < Formula
   end
 
   test do
-    assert_match "muse_bias -- version #{version}", shell_output("#{HOMEBREW_PREFIX}/bin/esorex --man-page muse_bias")
+    version_norevision = version.to_s[/(\d+(?:[.]\d+)+)/i, 1]
+    assert_match "muse_bias -- version #{version_norevision}", shell_output("#{HOMEBREW_PREFIX}/bin/esorex --man-page muse_bias")
   end
 end

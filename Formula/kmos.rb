@@ -39,6 +39,7 @@ class Kmos < Formula
   end
 
   test do
-    assert_match "kmos_dark -- version #{version}", shell_output("#{HOMEBREW_PREFIX}/bin/esorex --man-page kmos_dark")
+    version_norevision = version.to_s[/(\d+(?:[.]\d+)+)/i, 1]
+    assert_match "kmos_dark -- version #{version_norevision}", shell_output("#{HOMEBREW_PREFIX}/bin/esorex --man-page kmos_dark")
   end
 end

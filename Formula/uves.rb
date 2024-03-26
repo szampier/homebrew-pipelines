@@ -43,6 +43,7 @@ class Uves < Formula
   end
 
   test do
-    assert_match "uves_cal_mbias -- version #{version}", shell_output("#{HOMEBREW_PREFIX}/bin/esorex --man-page uves_cal_mbias")
+    version_norevision = version.to_s[/(\d+(?:[.]\d+)+)/i, 1]
+    assert_match "uves_cal_mbias -- version #{version_norevision}", shell_output("#{HOMEBREW_PREFIX}/bin/esorex --man-page uves_cal_mbias")
   end
 end
