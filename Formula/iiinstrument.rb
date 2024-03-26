@@ -41,6 +41,7 @@ class Iiinstrument < Formula
   end
 
   test do
-    assert_match "rrrecipe -- version #{version}", shell_output("#{HOMEBREW_PREFIX}/bin/esorex --man-page rrrecipe")
+    version_norevision = version.to_s[/(\d+(?:[.]\d+)+)/i, 1]
+    assert_match "rrrecipe -- version #{version_norevision}", shell_output("#{HOMEBREW_PREFIX}/bin/esorex --man-page rrrecipe")
   end
 end
