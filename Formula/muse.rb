@@ -43,6 +43,6 @@ class Muse < Formula
   end
 
   test do
-    system "esorex", "--man-page", "muse_bias"
+    assert_match "muse_bias -- version #{version}", shell_output("#{bin}/esorex --man-page muse_bias")
   end
 end

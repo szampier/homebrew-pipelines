@@ -39,6 +39,6 @@ class Kmos < Formula
   end
 
   test do
-    system "esorex", "--man-page", "kmos_dark"
+    assert_match "kmos_dark -- version #{version}", shell_output("#{bin}/esorex --man-page kmos_dark")
   end
 end

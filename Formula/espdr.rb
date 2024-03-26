@@ -40,6 +40,6 @@ class Espdr < Formula
   end
 
   test do
-    system "esorex", "--man-page", "espdr_mbias"
+    assert_match "espdr_mbias -- version #{version}", shell_output("#{bin}/esorex --man-page espdr_mbias")
   end
 end
