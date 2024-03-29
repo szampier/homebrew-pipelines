@@ -12,6 +12,15 @@ class Edps < Formula
     regex(/href=.*?edps[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/edps-1.3.1"
+    sha256 cellar: :any,                 arm64_sonoma:  "4a29460cf05a6589a5c7fb6d85d3bc370252db93c1a2eac861fb2a6e907946f7"
+    sha256 cellar: :any,                 arm64_ventura: "b470b784c2a1ca9b05817da6dcc82a19c2998768bfe199f6a4a319bd8e4a447e"
+    sha256 cellar: :any,                 ventura:       "3146f625f2afdbbe584f1260002f6cf40825d7fa6a05a63c2606f6a8fa6759e1"
+    sha256 cellar: :any,                 monterey:      "1931c3b804f57f400ea9668d4e01a7e40f82ae3065676f8c793a4a87467afb5c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f1de0600c7d14b85336629066a7837a930f6722e2026dfa230084c683081c913"
+  end
+
   depends_on "cmake"
   depends_on "lapack"
   depends_on "libyaml"
