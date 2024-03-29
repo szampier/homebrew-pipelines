@@ -7,10 +7,16 @@ class Adari < Formula
   sha256 "ecd2b2bb9dfe0b308817d397ddb7dce7e84b10c534f318e68347a6cc85a35a1d"
   license "BSD-3-Clause"
 
+  livecheck do
+    url "https://ftp.eso.org/pub/dfs/pipelines/libraries/adari_core/"
+    regex(/href=.*?adari_core[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
   depends_on "cmake" => :build
   depends_on "rust" => :build
   depends_on "freetype"
   depends_on "lapack"
+  depends_on "libxcb"
   depends_on "libyaml"
   depends_on "openblas"
   depends_on "openjpeg"
