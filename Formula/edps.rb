@@ -13,7 +13,9 @@ class Edps < Formula
   end
 
   depends_on "cmake"
+  depends_on "lapack"
   depends_on "libyaml"
+  depends_on "openblas"
   depends_on "python@3.11"
 
   resource "anyio" do
