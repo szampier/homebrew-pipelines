@@ -12,6 +12,14 @@ class Adari < Formula
     regex(/href=.*?adari_core[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/adari-0.4.0"
+    sha256 cellar: :any,                 arm64_sonoma: "e376445b728b042854680c058666da8e82a685b8f0e1f37b7d2e048baf8de55c"
+    sha256 cellar: :any,                 ventura:      "874a49e589465a46e1bdbd1dab4689d88595caa25083a3d3f0c8f1b130312496"
+    sha256 cellar: :any,                 monterey:     "9f623b9d7d56e9965b57c82e39aaf3dff85cdb0e202bd57f97759896cfa752f2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "8853b0262fba0faeea52ae70977fede8be352d5e8f4029a7529a9af5e696a6f5"
+  end
+
   depends_on "cmake" => :build
   depends_on "rust" => :build
   depends_on "freetype"
