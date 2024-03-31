@@ -26,6 +26,17 @@ class Erfa < Formula
   end
 
   test do
-    assert_equal "aaa", "aaa"
+    (testpath/"test.c").write <<~EOF
+        #include <erfa.h>
+        int main()
+        {
+          double a[3] = {1, 2, 3};
+          double b[3];
+          eraCp(a, b);
+          return 0;
+        }
+    EOF
+    system ENV.cc, "test.c", "-L#{lib}", "-I#{include}", "-lerfa", "-o", "test"
+    system "./test"
   end
 end
