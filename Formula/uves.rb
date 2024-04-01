@@ -4,7 +4,7 @@ class Uves < Formula
   url "https://ftp.eso.org/pub/dfs/pipelines/instruments/uves/uves-kit-6.4.1-1.tar.gz"
   sha256 "b801adb7ad804fe8b097fd29caaf04ebd3d61beaaabb902e2fa37330f471a4b1"
   license "GPL-2.0-or-later"
-  revision 1
+  revision 2
 
   livecheck do
     url :homepage
@@ -28,8 +28,9 @@ class Uves < Formula
   depends_on "pkg-config"
 
   def install
-    system "tar", "xf", "uves-6.4.1.tar.gz"
-    cd "uves-6.4.1" do
+    version_norevision = version.to_s[/(\d+(?:[.]\d+)+)/i, 1]
+    system "tar", "xf", "uves-#{version_norevision}.tar.gz"
+    cd "uves-#{version_norevision}" do
       # Fix -flat_namespace being used on Big Sur and later.
       system "curl", "-O", "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
       system "patch", "configure", "configure-big_sur.diff"
@@ -40,6 +41,8 @@ class Uves < Formula
                             "--with-curl=#{Formula["curl"].prefix}"
       system "make", "install"
     end
+    system "tar", "xf", "uves-calib-#{version_norevision}.tar.gz"
+    (prefix/"share/esopipes/datastatic/uves-#{version_norevision}").install Dir["uves-calib-#{version_norevision}/cal/*"]
   end
 
   test do
