@@ -4,7 +4,7 @@ class Uves < Formula
   url "https://ftp.eso.org/pub/dfs/pipelines/instruments/uves/uves-kit-6.4.1-1.tar.gz"
   sha256 "b801adb7ad804fe8b097fd29caaf04ebd3d61beaaabb902e2fa37330f471a4b1"
   license "GPL-2.0-or-later"
-  revision 2
+  revision 3
 
   livecheck do
     url :homepage
@@ -26,6 +26,7 @@ class Uves < Formula
   depends_on "esorex"
   depends_on "gsl"
   depends_on "pkg-config"
+  depends_on "uves-calib"
 
   def install
     version_norevision = version.to_s[/(\d+(?:[.]\d+)+)/i, 1]
@@ -41,8 +42,6 @@ class Uves < Formula
                             "--with-curl=#{Formula["curl"].prefix}"
       system "make", "install"
     end
-    system "tar", "xf", "uves-calib-#{version_norevision}.tar.gz"
-    (prefix/"share/esopipes/datastatic/uves-#{version_norevision}").install Dir["uves-calib-#{version_norevision}/cal/*"]
   end
 
   test do
