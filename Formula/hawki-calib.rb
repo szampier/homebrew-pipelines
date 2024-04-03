@@ -1,4 +1,4 @@
-class Hawki < Formula
+class HawkiCalib < Formula
   desc "ESO HAWKI instrument pipeline (calibration data)"
   homepage "https://www.eso.org/sci/software/pipelines/"
   url "https://ftp.eso.org/pub/dfs/pipelines/hawki/hawki-kit-2.4.14-3.tar.gz"
