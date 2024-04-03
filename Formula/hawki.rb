@@ -10,6 +10,15 @@ class Hawki < Formula
     regex(/href=.*?hawki-kit-(\d+(?:[.-]\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/hawki-2.4.14-3"
+    sha256 cellar: :any,                 arm64_sonoma:  "bd6f92903fa4b9be779dc96322dcb2b0c39e258b1c69850ee5b217584a895d2b"
+    sha256 cellar: :any,                 arm64_ventura: "46d5073256623b47f09603c321ad2e99356fb06ac47c2d262efbf5b3d72e2831"
+    sha256 cellar: :any,                 ventura:       "910802e64197b0c2a1636e8ee48b3839b9e1f2a1ed70632a253fedaf0f7958d0"
+    sha256 cellar: :any,                 monterey:      "8caac21a46b423110919e3ba1b5b6c8eaca349aa00d348ffc89cca40426834df"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "530a6c37298e3d921aa7be715a48534f1ea30de654b496a0538eb9d184c9a70b"
+  end
+
   depends_on "pkg-config" => :build
   depends_on "cpl"
   depends_on "esorex"
