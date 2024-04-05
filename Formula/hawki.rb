@@ -19,6 +19,9 @@ class Hawki < Formula
     version_norevision = version.to_s[/(\d+(?:[.]\d+)+)/i, 1]
     system "tar", "xf", "hawki-#{version_norevision}.tar.gz"
     cd "hawki-#{version_norevision}" do
+      # Fix -flat_namespace being used on Big Sur and later.
+      system "curl", "-O", "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
+      system "patch", "configure", "configure-big_sur.diff"
       system "./configure", "--prefix=#{prefix}",
                             "--with-cpl=#{Formula["cpl"].prefix}",
                             "--with-gsl=#{Formula["gsl"].prefix}"
