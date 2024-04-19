@@ -2,13 +2,24 @@
 
 ## How do I install these formulae?
 
-`brew install szampier/tap/<formula>`
+`brew install szampier/pipelines/<formula>`
 
-Or `brew tap szampier/tap` and then `brew install <formula>`.
+Or `brew tap szampier/pipelines` and then `brew install <formula>`.
 
 ### Formulae
+* adari
+* edps
+* erfa
 * esorex
+* espdr-calib
+* espdr
+* hawki-calib
+* hawki
 * iiinstrument
+* kmos
+* muse
+* telluriccorr
+* uves-calib
 * uves
 
 ## Documentation
