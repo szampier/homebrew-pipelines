@@ -10,6 +10,7 @@ Or `brew tap szampier/pipelines` and then `brew install <formula>`.
 * adari
 * edps
 * erfa
+* esoreflex
 * esorex
 * espdr-calib
 * espdr

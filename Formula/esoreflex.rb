@@ -5,6 +5,12 @@ class Esoreflex < Formula
   sha256 "65181046d00d00c1b66ce4e1493c430b7c2899b874f895d51f0dceaf34f1e1f6"
   license "GPL-2.0-or-later"
 
+  livecheck do
+    url :homepage
+    regex(/href=.*?esoreflex-(\d+(?:[.-]\d+)+)\.t/i)
+  end
+
+  depends_on "cpl"
   depends_on "esorex"
   depends_on "openjdk@11"
   depends_on "python@3.9"
@@ -13,15 +19,16 @@ class Esoreflex < Formula
     pkgshare.install Dir["*"]
     bin.install_symlink pkgshare/"esoreflex/bin/esoreflex"
     kepler_workflows = "~/KeplerData/workflows/MyWorkflows"
-    esoreflex_default_recipe_config = "#{etc}/esoreflex_default_recipe_config.rc"
 
-    cp "#{Formula["cpl"].etc}/esorex.rc", "#{etc}/esoreflex-esorex.rc"
+    (prefix/"etc").mkpath
 
-    (etc/"esoreflex_default_recipe_config.rc").write <<~EOS
+    cp "#{Formula["cpl"].etc}/esorex.rc", "#{prefix}/etc/esoreflex-esorex.rc"
+
+    (prefix/"etc/esoreflex_default_recipe_config.rc").write <<~EOS
       # No default parameters should be specified for recipes under Reflex.
     EOS
 
-    (etc/"esoreflex.rc").write <<~EOS
+    (prefix/"etc/esoreflex.rc").write <<~EOS
       # This is the system wide configuration file for esoreflex #{version}.
       # One can copy this file to ~/.esoreflex/esoreflex.rc and adjust these
       # parameters appropriately for your customised environment if needed.
@@ -45,7 +52,7 @@ class Esoreflex < Formula
       esoreflex.esorex-config=#{HOMEBREW_PREFIX}/etc/esoreflex-esorex.rc
 
       # The path to the dummy configuration file for recipes.
-      esoreflex.esorex-recipe-config=#{HOMEBREW_PREFIX}/etc/esoreflex_default_recipe_config.rc
+      esoreflex.esorex-recipe-config=#{etc}/esoreflex_default_recipe_config.rc
 
       # The command used to launch python.
       esoreflex.python-command=#{HOMEBREW_PREFIX}/bin/python3.9
@@ -76,9 +83,9 @@ class Esoreflex < Formula
     inreplace pkgshare/"esoreflex/bin/esoreflex" do |s|
       s.gsub! "$(dirname $0)/../..", HOMEBREW_PREFIX/"share/esoreflex"
       s.gsub! kepler_workflows, HOMEBREW_PREFIX/"share/reflex/workflows:#{kepler_workflows}"
-      s.gsub! "/etc/esoreflex.rc", HOMEBREW_PREFIX/"etc/esoreflex.rc"
+      s.gsub! "/etc/esoreflex.rc", etc/"esoreflex.rc"
       s.gsub! 'LOAD_ESOREX_CONFIG=""', "LOAD_ESOREX_CONFIG=#{HOMEBREW_PREFIX}/etc/esorex.rc"
-      s.gsub! 'LOAD_ESOREX_RECIPE_CONFIG=""', "LOAD_ESOREX_CONFIG=#{esoreflex_default_recipe_config}"
+      s.gsub! 'LOAD_ESOREX_RECIPE_CONFIG=""', "LOAD_ESOREX_CONFIG=#{etc}/esoreflex_default_recipe_config.rc"
     end
 
     rm_rf pkgshare/"common/src"
