@@ -19,6 +19,8 @@ Or `brew tap szampier/pipelines` and then `brew install <formula>`.
 * iiinstrument
 * kmos
 * muse
+* pycpl
+* pyesorex
 * telluriccorr
 * uves-calib
 * uves
