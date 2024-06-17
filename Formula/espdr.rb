@@ -27,8 +27,9 @@ class Espdr < Formula
   depends_on "pkg-config"
 
   def install
-    system "tar", "xf", "espdr-3.1.0.tar.gz"
-    cd "espdr-3.1.0" do
+    version_norevision = version.to_s[/(\d+(?:[.]\d+)+)/i, 1]
+    system "tar", "xf", "espdr-#{version_norevision}.tar.gz"
+    cd "espdr-#{version_norevision}" do
       system "./configure", "--prefix=#{prefix}",
                             "--with-cpl=#{Formula["cpl"].prefix}",
                             "--with-gsl=#{Formula["gsl"].prefix}",
