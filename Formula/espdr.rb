@@ -11,12 +11,12 @@ class Espdr < Formula
   end
 
   bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/espdr-3.1.0-1_1"
-    sha256 arm64_sonoma:  "02f12a94287719fbca2bae52502893e4702311c0b148526e21c0123bac0daf54"
-    sha256 arm64_ventura: "3243b3c85505526830d8e8b52facee9297d710a0b4c6d6575b99433eff572c8f"
-    sha256 ventura:       "4977da38f7b853aab6629f36826b0d91cff749cc3d7235146b26e40d907bdc1e"
-    sha256 monterey:      "bb685c58fab8f85ac3a80d950eb90940448f71730905978744f909c014663629"
-    sha256 x86_64_linux:  "5797f685a9e757870cd5d3ffb54ae3fcc83b47ec92667a9701de3c4dcfe36209"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/espdr-3.2.0"
+    sha256 arm64_sonoma:  "5c74a82d99aab260d16517fa93a2fb1786a16ff65be31d610ca77c19583ac7a4"
+    sha256 arm64_ventura: "6aeb480d6bf8a34b797ac2365df32860f3fbceb3ee8c06bbd3315cbacbf1fbc2"
+    sha256 ventura:       "d7333040c950bf2c9aab2dd03359b3a00c52fc0988b5da9ad23a75a6860cccec"
+    sha256 monterey:      "5e1d23fa79e193b48cc1a7cc98c84ef64b31f7a77f8a41e933b422c9366f5bd2"
+    sha256 x86_64_linux:  "9732d39b76cbb30bed874c7a12a5d8eaaac800645a53c75b02c585f3d852b97a"
   end
 
   depends_on "cpl"
