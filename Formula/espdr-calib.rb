@@ -11,12 +11,12 @@ class EspdrCalib < Formula
   end
 
   bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/espdr-calib-3.1.0-1"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d0871059ad72ced8cbb482d2344d651a287589f766dc0cec349fa1ce4fdf4952"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "b94de03b79dc5383862865092555877f7341f00303036e3d00bd4b958a066812"
-    sha256 cellar: :any_skip_relocation, ventura:       "38828f8be4ea6941cdd79d99cde38a9030aa6f512baa260065e3fb2009c6e747"
-    sha256 cellar: :any_skip_relocation, monterey:      "d9e7deb650112fa1e41102fde0e7d13781502a195ef62525829c37c7e639ea29"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "10d21ec7cb8ce0c704223d4f2ae7398af29c35c48884517e4ae97d6faa6ac5a9"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/espdr-calib-3.2.0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d693abd5441909be3f99dce93bf17012e1681e56f5c491c087d985ebe9d5189f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "db3bdf4796f440fda4eb2bf0305785e7d673fe1384ad572f5720b6d8362aac7d"
+    sha256 cellar: :any_skip_relocation, ventura:       "40f4984b9f41982d8ab80d9c30d41f0ef8cea982a2093ce8afd0d158a003d820"
+    sha256 cellar: :any_skip_relocation, monterey:      "d40c6d142b57dcfb4af5fbc49e32a9f520d9fb5a1751c3a548ebefa80777fc01"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "055b3cd876b52695f61cbfcc73465e77ab2b3b5926750b1c2a10792c39625044"
   end
 
   def install
