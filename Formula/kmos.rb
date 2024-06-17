@@ -24,8 +24,9 @@ class Kmos < Formula
   depends_on "telluriccorr"
 
   def install
-    system "tar", "xf", "kmos-4.4.2.tar.gz"
-    cd "kmos-4.4.2" do
+    version_norevision = version.to_s[/(\d+(?:[.]\d+)+)/i, 1]
+    system "tar", "xf", "kmos-#{version_norevision}.tar.gz"
+    cd "kmos-#{version_norevision}" do
       # Fix -flat_namespace being used on Big Sur and later.
       system "curl", "-O", "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
       system "patch", "configure", "configure-big_sur.diff"
