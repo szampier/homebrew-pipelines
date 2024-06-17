@@ -11,12 +11,12 @@ class UvesCalib < Formula
   end
 
   bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/uves-calib-6.4.1-1"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "43e4e25aa5c6b3e47ddbb8c2a1939d82893519cf9b6d53877674839e7b7fd00e"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "1ba8b68cb559f1c62cd436ae330e3d490690cef3a155b559fa1773482766b805"
-    sha256 cellar: :any_skip_relocation, ventura:       "0f7710b7cd281efaca4dcae647e49d9d30a7d2199676ea3e94ce915349c0aff4"
-    sha256 cellar: :any_skip_relocation, monterey:      "7e9f86cf3d948e4717152c62b533f0c1d2af8e6fcf829f4eeb496e2cbc4f9a0e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d618621b4ec90b776d16246ecea0bc8c4a63280547b4cc0b71dae8cd4278223f"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/uves-calib-6.4.6"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8d3579d6b1cb9eb95848dd608365e71f736002689e65d4e855024e5fc07e6f20"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "e8ee405a7bb669da2cec5470ce810849eff07a738482915d791652178b17f728"
+    sha256 cellar: :any_skip_relocation, ventura:       "b2b5780949e55f6d1e538f162f1bd5a4233bb6f0bcd0d7bb03cbf66ae4879def"
+    sha256 cellar: :any_skip_relocation, monterey:      "1463d693b2f3ef182952e0c9d034648f9e8996a64c0601db6e5090ab884e0900"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9b98762ebd37d5d9b14d63a286517b4f52e8d1c93b5ea817dad5d16743cc183e"
   end
 
   def install
