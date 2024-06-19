@@ -13,11 +13,12 @@ class Adari < Formula
   end
 
   bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/adari-0.4.0"
-    sha256 cellar: :any,                 arm64_sonoma: "e376445b728b042854680c058666da8e82a685b8f0e1f37b7d2e048baf8de55c"
-    sha256 cellar: :any,                 ventura:      "874a49e589465a46e1bdbd1dab4689d88595caa25083a3d3f0c8f1b130312496"
-    sha256 cellar: :any,                 monterey:     "9f623b9d7d56e9965b57c82e39aaf3dff85cdb0e202bd57f97759896cfa752f2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "8853b0262fba0faeea52ae70977fede8be352d5e8f4029a7529a9af5e696a6f5"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/adari-0.6.0"
+    sha256 cellar: :any,                 arm64_sonoma:  "56731c2933ed3fb42ded8c4a96c373580b2876a3cd22449ccd36b0666b643723"
+    sha256 cellar: :any,                 arm64_ventura: "f734553313f357c78ea9bb4e8cb193ddb172c32ca781878624be2336f332ab50"
+    sha256 cellar: :any,                 ventura:       "9008a3b9bf21718dd08a2be2c0a702d3aef6f22c5fccb8690a092a5480992c5a"
+    sha256 cellar: :any,                 monterey:      "4a685f264543312dbe05c869b79ff17dda57f7ab30ab2cc7fc2a14b65a61d9b3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a1565713a479f096cf53a8df4928efe2e738bf23f7dab536d9c3239cc2392fb3"
   end
 
   depends_on "cmake" => :build
