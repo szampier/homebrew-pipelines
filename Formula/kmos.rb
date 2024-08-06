@@ -35,8 +35,8 @@ class Kmos < Formula
                             "--with-cpl=#{Formula["cpl"].prefix}",
                             "--with-telluriccorr=#{Formula["telluriccorr"].prefix}"
       system "make", "install"
-      rm_f bin/"kmos_calib.py"
-      rm_f bin/"kmos_verify.py"
+      rm bin/"kmos_calib.py"
+      rm bin/"kmos_verify.py"
     end
   end
 
