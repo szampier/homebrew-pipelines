@@ -1,10 +1,9 @@
 class Muse < Formula
   desc "ESO MUSE recipe plugins"
   homepage "https://www.eso.org/sci/software/pipelines/"
-  url "https://ftp.eso.org/pub/dfs/pipelines/instruments/muse/muse-kit-2.8.9-2.tar.gz"
-  sha256 "2a95fe6b90b9829218f295d2d73daa14691d00618679d904f83fac25f8e5948d"
+  url "https://ftp.eso.org/pub/dfs/pipelines/instruments/muse/muse-kit-2.10.10.tar.gz"
+  sha256 "d3d51e755a0fdffc21d5730e0041f4e3a4826ec9ffcb97c1f0f69860a7a693df"
   license "GPL-2.0-or-later"
-  revision 1
 
   livecheck do
     url :homepage
