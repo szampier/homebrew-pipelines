@@ -4,6 +4,7 @@ class EsopipeGravity < Formula
   url "https://ftp.eso.org/pub/dfs/pipelines/instruments/gravity/gravity-kit-1.6.6.tar.gz"
   sha256 "300be5f0b9907439485ee5c7aad784d93a1a679167e365a0eb3cd61ebc27b24d"
   license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url :homepage
