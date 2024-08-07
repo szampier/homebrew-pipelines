@@ -11,12 +11,12 @@ class EsopipeGravity < Formula
   end
 
   bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esopipe-gravity-1.6.6_1"
-    sha256 cellar: :any,                 arm64_sonoma:  "49b56f6e50ef3ab441e552fc23ccdcf3dc1db6e30b166697a0b7a034f7fbc7cd"
-    sha256 cellar: :any,                 arm64_ventura: "c495fc6cc29ae7756597b6af08d3347dffeb6b170a79cfde97d0848229a8fc81"
-    sha256 cellar: :any,                 ventura:       "5f30776f496cbf16f72601bfa83a463a41fef7a743c9cfa8c1224497d2d5144b"
-    sha256 cellar: :any,                 monterey:      "007cfae15c3cc3bcf9bfd9429537f6fda98e7b37d0edc948593c004c4f8de808"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5cf9d6275dc9af225212a41c459a6fa31e2e64606f12801638c13ae121bd0821"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esopipe-gravity-1.6.7-2"
+    sha256 cellar: :any,                 arm64_sonoma:  "6e2d7a28581ac5a1a35aadbc07bd4fd5228e42a1ca06c4ea6a2964d8fb8658c0"
+    sha256 cellar: :any,                 arm64_ventura: "4586fbc3467b325fbef0b605d450d135875af1186d43e48cd58ba524261aff61"
+    sha256 cellar: :any,                 ventura:       "a4be0b2ca7e5dd5643ede818a605fab2d14e741029b39db57685797a565fbefb"
+    sha256 cellar: :any,                 monterey:      "9d7a86d7fe5a35fc7da6a52fd78adbaf012d0fc6ceec6571d01ad2ae760518f5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cb03bb5c2ff7959e5ec86583e4010bc684390bfca147ca13d0af4b980402c1ba"
   end
 
   depends_on "pkg-config" => :build
