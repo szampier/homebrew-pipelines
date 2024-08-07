@@ -1,10 +1,9 @@
 class EsopipeGravity < Formula
   desc "ESO GRAVITY recipe plugins"
   homepage "https://www.eso.org/sci/software/pipelines/"
-  url "https://ftp.eso.org/pub/dfs/pipelines/instruments/gravity/gravity-kit-1.6.6.tar.gz"
-  sha256 "300be5f0b9907439485ee5c7aad784d93a1a679167e365a0eb3cd61ebc27b24d"
+  url "https://ftp.eso.org/pub/dfs/pipelines/instruments/gravity/gravity-kit-1.6.7-2.tar.gz"
+  sha256 "1eafb832c91df9ea05b4758d0b250c30d7b57a6d0ff5103d9aac25fe778d9c1e"
   license "GPL-2.0-or-later"
-  revision 1
 
   livecheck do
     url :homepage
