@@ -4,6 +4,7 @@ class Hawki < Formula
   url "https://ftp.eso.org/pub/dfs/pipelines/instruments/hawki/hawki-kit-2.4.13-3.tar.gz"
   sha256 "a48297e56d216d566fb1bbb112d85243ba2a013c5ef9302c9dbe8745038d42e3"
   license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url :homepage
