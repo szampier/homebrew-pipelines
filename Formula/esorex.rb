@@ -11,12 +11,12 @@ class Esorex < Formula
   end
 
   bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esorex-3.13.8"
-    sha256 arm64_sonoma:  "576208a1698c10a1403417b06edd88c6996525ec8a3ef882ee92a6f2f464a500"
-    sha256 arm64_ventura: "64a5fc489763d41abc17c6aa5e029994b11a7195d0c6fe842f6ddbdced6b50fd"
-    sha256 ventura:       "9b600709fb0f13be339aec3b5b1df3e4c88c0f09672ba0dc2a012f7e8664dde7"
-    sha256 monterey:      "5993beb4c64f98f5585ec84b91e1c3a9c76100e1b390eb6cb830c94ce2947203"
-    sha256 x86_64_linux:  "7981eb86cca7ca54d48fd39f47a34288ad7e112bdb5026a66be06d23f420cbc2"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esorex-3.13.9"
+    sha256 arm64_sonoma:  "f968a7ec7fb7dad6a2d5f95ad6bec6706a6f879328ed898aa5946f3b996fdd44"
+    sha256 arm64_ventura: "52a347cd9efe49f07586f0b1726cfbec0f832c52ce6185797f7b8e598ab7d320"
+    sha256 ventura:       "4587938df73c6fab861accaec3f5f8162b25aba729ffe3c2c52f95335cf526e7"
+    sha256 monterey:      "2173135b587470e36a3835cde8a2847a24d710c1794a451ac2c29ed23a1c0bce"
+    sha256 x86_64_linux:  "e487541c1fc207f8e4bea9e11c87e85d9b09efbe185f3e0148b099f240adec22"
   end
 
   depends_on "cpl"
