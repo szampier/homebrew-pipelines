@@ -15,6 +15,7 @@ class EsopipeFors < Formula
   end
 
   depends_on "cfitsio"
+  depends_on "curl"
   depends_on "cpl"
   depends_on "erfa"
   depends_on "esorex"
@@ -31,7 +32,8 @@ class EsopipeFors < Formula
              "--with-cpl=#{Formula["cpl"].prefix}",
              "--with-erfa=#{Formula["erfa"].prefix}",
              "--with-telluriccorr=#{Formula["telluriccorr"].prefix}",
-             "--with-gsl=#{Formula["gsl"].prefix}"
+             "--with-gsl=#{Formula["gsl"].prefix}",
+             "--with-curl=#{Formula["curl"].prefix}"
       system "make", "install"
     end
   end
