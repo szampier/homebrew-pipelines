@@ -15,8 +15,8 @@ class EsopipeFors < Formula
   end
 
   depends_on "cfitsio"
-  depends_on "curl"
   depends_on "cpl"
+  depends_on "curl"
   depends_on "erfa"
   depends_on "esorex"
   depends_on "gsl"
