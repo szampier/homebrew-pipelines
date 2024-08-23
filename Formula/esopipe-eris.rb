@@ -34,6 +34,6 @@ class EsopipeEris < Formula
 
   test do
     version_norevision = version.to_s[/(\d+(?:[.]\d+)+)/i, 1]
-    assert_match "xsh_mdark -- version #{version_norevision}", shell_output("#{HOMEBREW_PREFIX}/bin/esorex --man-page xsh_mdark")
+    assert_match "eris_nix_dark -- version #{version_norevision}", shell_output("#{HOMEBREW_PREFIX}/bin/esorex --man-page eris_nix_dark")
   end
 end
