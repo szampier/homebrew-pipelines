@@ -10,6 +10,14 @@ class EsopipeEris < Formula
     regex(/href=.*?eris-kit-(\d+(?:[.-]\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esopipe-eris-1.6.0"
+    sha256 cellar: :any,                 arm64_sonoma: "29795fe905e9faa07b280eb9bb10370e79441ec4f3e5adbca82f60a50928d534"
+    sha256 cellar: :any,                 ventura:      "b51f614e5e291631a1135cce8f44b6bf6f04ed5241821a8c9818708cdda7bf34"
+    sha256 cellar: :any,                 monterey:     "c485b64ec91bb67967aa1f2fecfe11e7e2deaa06b1824b7731fdca44bad301cc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "f3bef90a89882321359e75b2198b922bae4a4a6885753ab0a1a6d58eb8b7978c"
+  end
+
   depends_on "pkg-config" => :build
   depends_on "cfitsio"
   depends_on "cpl"
