@@ -11,12 +11,11 @@ class Hawki < Formula
   end
 
   bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/hawki-2.5.7"
-    sha256 cellar: :any,                 arm64_sonoma:  "66cc0dd97f25bb36c2ca487e1c4859de61206b89e3f5c1a20c08cd828e57ecdd"
-    sha256 cellar: :any,                 arm64_ventura: "cb2e2cd12238ee4da97722fb4e9671144c3828335b360da3c4071b2187848b23"
-    sha256 cellar: :any,                 ventura:       "807a0a4e9407e20bb8bb86978b868ad438bcc72463e339c1a25084bf3f33f0b9"
-    sha256 cellar: :any,                 monterey:      "8fbb07e17d73552f4d3fc96629b44379cba63fc389c695172524184366bf5abf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7e9098e1f8cd3da21b4a9aaa82a679cad617645773c7d9d5bacd2a3b7bd28b60"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/hawki-2.5.8"
+    sha256 cellar: :any,                 arm64_sonoma: "70ef585587f4d4e8dc7c1ed07797a6f1a3aa0f26d44de654ea6cead12f437cda"
+    sha256 cellar: :any,                 ventura:      "442a95a154540c1094ae58157a5a24f112c77e2801f0d4f1b32d6392221fb92a"
+    sha256 cellar: :any,                 monterey:     "366d60e484ce42a60134c9e29aacabaf1ea060ab384179599b803bdba5d2a249"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "7d13d9159effb5c0d5818fe7ec5d4c13f2ea0ea08d52f5e058f8d4216a7b9be9"
   end
 
   depends_on "pkg-config" => :build
