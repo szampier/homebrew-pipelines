@@ -30,6 +30,7 @@ class EsopipeCr2res < Formula
              "--with-gsl=#{Formula["gsl"].prefix}"
       system "make", "install"
     end
+    rm_r bin
   end
 
   test do
