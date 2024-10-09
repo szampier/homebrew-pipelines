@@ -1,5 +1,5 @@
-class EsopipeGravity < Formula
-  desc "ESO GRAVITY recipe plugins"
+class EsopipeGravityRecipes < Formula
+  desc "ESO GRAVITY instrument pipeline (recipe plugins)"
   homepage "https://www.eso.org/sci/software/pipelines/"
   url "https://ftp.eso.org/pub/dfs/pipelines/instruments/gravity/gravity-kit-1.6.7-2.tar.gz"
   sha256 "1eafb832c91df9ea05b4758d0b250c30d7b57a6d0ff5103d9aac25fe778d9c1e"
