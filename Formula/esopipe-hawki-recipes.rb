@@ -11,11 +11,10 @@ class EsopipeHawkiRecipes < Formula
   end
 
   bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/hawki-2.5.8"
-    sha256 cellar: :any,                 arm64_sonoma: "70ef585587f4d4e8dc7c1ed07797a6f1a3aa0f26d44de654ea6cead12f437cda"
-    sha256 cellar: :any,                 ventura:      "442a95a154540c1094ae58157a5a24f112c77e2801f0d4f1b32d6392221fb92a"
-    sha256 cellar: :any,                 monterey:     "366d60e484ce42a60134c9e29aacabaf1ea060ab384179599b803bdba5d2a249"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "7d13d9159effb5c0d5818fe7ec5d4c13f2ea0ea08d52f5e058f8d4216a7b9be9"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esopipe-hawki-recipes-2.5.8"
+    sha256 cellar: :any,                 arm64_sonoma: "2326c1deec3fa8df3e0badcacfdb6ca66216cef9cb742cf260ba37cab8a04d74"
+    sha256 cellar: :any,                 ventura:      "308119d370cf6725082dd14197645c12a30dc202c3571ca2660a755eeaba6dc0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "ce0c28dd9faf1a8f824e707dcf748afbe620c78d82a6c64984c0d3a4850b13db"
   end
 
   depends_on "pkg-config" => :build
