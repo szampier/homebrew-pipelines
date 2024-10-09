@@ -88,13 +88,9 @@ class Esoreflex < Formula
       s.gsub! 'LOAD_ESOREX_RECIPE_CONFIG=""', "LOAD_ESOREX_CONFIG=#{etc}/esoreflex_default_recipe_config.rc"
     end
 
-    rm_r pkgshare/"common/src"
-    rm_r pkgshare/"ptolemy/src/vendors/fmusdk/src/shared/libexpatMT.lib"
-    rm_r pkgshare/"ptolemy/src/vendors/fmusdk/binaries/win32"
-    rm_r pkgshare/"ptolemy/src/ptolemy/actor/lib/fmi/fmus/win32"
-    rm_r pkgshare/"ptolemy/src/lib/libIncrementalFMU_wrap.jnilib"
-    rm_r pkgshare/"ptolemy/src/bin/macContents/Contents/MacOS/JavaApplicationStub"
-    rm_r pkgshare/"build-area/resources/installer/launch4j"
+    rm_r(pkgshare/"common/src")
+    rm_r(pkgshare/"ptolemy/src/bin/macContents/Contents/MacOS/JavaApplicationStub")
+    rm_r(pkgshare/"build-area/resources/installer/launch4j")
   end
 
   test do
