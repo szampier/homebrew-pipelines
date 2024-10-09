@@ -11,12 +11,10 @@ class EsopipeEspdrRecipes < Formula
   end
 
   bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/espdr-3.2.0"
-    sha256 arm64_sonoma:  "5c74a82d99aab260d16517fa93a2fb1786a16ff65be31d610ca77c19583ac7a4"
-    sha256 arm64_ventura: "6aeb480d6bf8a34b797ac2365df32860f3fbceb3ee8c06bbd3315cbacbf1fbc2"
-    sha256 ventura:       "d7333040c950bf2c9aab2dd03359b3a00c52fc0988b5da9ad23a75a6860cccec"
-    sha256 monterey:      "5e1d23fa79e193b48cc1a7cc98c84ef64b31f7a77f8a41e933b422c9366f5bd2"
-    sha256 x86_64_linux:  "9732d39b76cbb30bed874c7a12a5d8eaaac800645a53c75b02c585f3d852b97a"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esopipe-espdr-recipes-3.2.0"
+    sha256 arm64_sonoma: "f21fda22f495f5e8bfde00e4f04ad459da7ce8f9c2df8ed03ff811a3e629e1ba"
+    sha256 ventura:      "4544b3be102711ff53a623ca09e66dab99b1863f4668decba06890ab7b968909"
+    sha256 x86_64_linux: "84b987a4378905f16ff69e03277e2ab97637f908d6676af0a102d031358d00a1"
   end
 
   depends_on "cpl"
