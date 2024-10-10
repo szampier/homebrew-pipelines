@@ -11,12 +11,10 @@ class EsopipeXshooRecipes < Formula
   end
 
   bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esopipe-xshooter-3.6.8"
-    sha256 cellar: :any,                 arm64_sonoma:  "4ae7f4df122e404cc59927d50c38c456e15bfd582cd9fdd5eb256d74285ae2c3"
-    sha256 cellar: :any,                 arm64_ventura: "ed26ae3ac56195915efa15df64fbab54db15c67cf836bec88fd06728892c8127"
-    sha256 cellar: :any,                 ventura:       "7f837bd868d1fd3ab48a3b316401efcad66c28bf8d42c03a59ee99901745f296"
-    sha256 cellar: :any,                 monterey:      "47a58bb9fafdbaee560f3c55ec32b8a38732cd83cbd6cb3b523e0f0ca7045666"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "42f06bda8ed221fa4456c5c884cf41675f63bc6faa879ef266aa33ea7e7f2226"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esopipe-xshoo-recipes-3.6.8"
+    sha256 cellar: :any,                 arm64_sonoma: "43d4ff74dd19f07f3bff98482bceb4ef0f183b9d8005bd153b528224abe2e85e"
+    sha256 cellar: :any,                 ventura:      "0dd273ac535aa656bdc725ebb7b7d46c5ac60742e849cd3d7e56f0c7553936cb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "f3de0532ee09e8c32ab9e83348dbe60298a5a3877a788e2e3af39df78cbed526"
   end
 
   depends_on "cfitsio"
