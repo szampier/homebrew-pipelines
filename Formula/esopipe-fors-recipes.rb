@@ -11,12 +11,10 @@ class EsopipeForsRecipes < Formula
   end
 
   bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esopipe-fors-5.6.5-7"
-    sha256 arm64_sonoma:  "791898ddbbc127b7a2bb068d82f276709ce1b79fc7eb96e85c5a0f8cad5323f3"
-    sha256 arm64_ventura: "8eaff368b76813eda0ab356da7be8f23db21ed071070353f6a648be472902db1"
-    sha256 ventura:       "d9c28e2d8f029840fe3eaa4135b536ebc8f620dd7023089f5b4391692286f4fd"
-    sha256 monterey:      "b3f6b1a52cda5c73e74f90690ba0a6cc8651a3290f8da57cb7bfff61e46cdbcb"
-    sha256 x86_64_linux:  "75e520ba75a9482c558b2eaedd8af2ec06d105a48a012a72cefe7b7e388f3142"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esopipe-fors-recipes-5.6.5-7"
+    sha256 arm64_sonoma: "7536944581f861adbc37e696edeff48327f8e5e11fd6628debbcea7a1b96286c"
+    sha256 ventura:      "187989ce924e71b8e6de0a611e52519243d0fc1af4b2a60131ea202449d70808"
+    sha256 x86_64_linux: "75ab13f461cc8cb4296caf1f3aba8c915b90a272d25c39fb6f05b5f097b49572"
   end
 
   depends_on "cfitsio"
