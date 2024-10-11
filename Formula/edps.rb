@@ -6,6 +6,7 @@ class Edps < Formula
   url "https://ftp.eso.org/pub/dfs/pipelines/libraries/edps/edps-1.4.2.tar.gz"
   sha256 "57d4d2fdf502ff0edd9482a92502a77c61acc2c252a41ee440736dde0921079a"
   license "BSD-3-Clause"
+  revision 1
 
   livecheck do
     url "https://ftp.eso.org/pub/dfs/pipelines/libraries/edps/"
