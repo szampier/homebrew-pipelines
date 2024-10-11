@@ -7,6 +7,11 @@ class Pyesorex < Formula
   sha256 "248634872bf094bf20063ca1662e0c62b9a4cfd0119a6447de176ea7fa63a930"
   license "GPL-2.0-or-later"
 
+  livecheck do
+    url "https://ftp.eso.org/pub/dfs/pipelines/libraries/pyesorex/"
+    regex(/href=.*?pyesorex[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
   bottle do
     root_url "https://github.com/szampier/homebrew-pipelines/releases/download/pyesorex-1.0.0"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d9089ebced8b22f7a300861542931f2bf8fa6f687866bf5b480e36a46697372b"

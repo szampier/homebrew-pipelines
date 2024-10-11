@@ -5,6 +5,11 @@ class Pycpl < Formula
   sha256 "aa9ee7e26d88a751494b9484542ea2285acbed3ff026821ff6bc54540aba3def"
   license "GPL-2.0-or-later"
 
+  livecheck do
+    url "https://ftp.eso.org/pub/dfs/pipelines/libraries/pycpl/"
+    regex(/href=.*?pycpl[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
   bottle do
     root_url "https://github.com/szampier/homebrew-pipelines/releases/download/pycpl-1.0.0"
     sha256 cellar: :any,                 arm64_sonoma:  "32c469afe29e3420975e13b5f5ba7a88705301e18c7028895403a74b3af01886"
