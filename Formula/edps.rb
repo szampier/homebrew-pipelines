@@ -13,12 +13,10 @@ class Edps < Formula
   end
 
   bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/edps-1.3.3"
-    sha256 cellar: :any,                 arm64_sonoma:  "5f5a6726e1f87a52335d89ea480714c71a03f2f8f6e28ce38b2f7a900e156055"
-    sha256 cellar: :any,                 arm64_ventura: "04ffc4b7846f6bc9b09beb9a3e8d9a4de94c26d2004c8de3bf1029f10dcbbe16"
-    sha256 cellar: :any,                 ventura:       "bcdf043562a2b1f35a6cd682fc3448da91f5af1e7315d11d39a30463b4e13ff4"
-    sha256 cellar: :any,                 monterey:      "5276de484f56ad9619988a606cf8ed64c1b52d41b249b492a317a7d3be0358e7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "48451121b370cbb6148f6954ef26d0523b11c541eafb55d8d4bfba411d6d8dea"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/edps-1.4.2"
+    sha256 cellar: :any,                 arm64_sonoma: "b5da359510dac48a21401bed103ec61db5c0faf4116140a9b9d1f4eaa999fc23"
+    sha256 cellar: :any,                 ventura:      "ddaf9c68b545c4b5e55747458ea12785d1475b0c75afb05da68c6a1d3ef4edab"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "8f28280cd2c4af37f3e2240b4c0f10abf3722d99021df4ce79cefa8d90d46680"
   end
 
   depends_on "cmake"
