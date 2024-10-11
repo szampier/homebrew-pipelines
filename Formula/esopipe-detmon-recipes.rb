@@ -1,3 +1,7 @@
+# typed: strict
+# frozen_string_literal: true
+
+# Detmon
 class EsopipeDetmonRecipes < Formula
   desc "ESO DETMON instrument pipeline (recipe plugins)"
   homepage "https://www.eso.org/sci/software/pipelines/"
@@ -28,11 +32,12 @@ class EsopipeDetmonRecipes < Formula
     version_norevision = version.to_s[/(\d+(?:[.]\d+)+)/i, 1]
     system "tar", "xf", "detmon-#{version_norevision}.tar.gz"
     cd "detmon-#{version_norevision}" do
-      system "./configure", "--prefix=#{prefix}",
-                            "--with-cpl=#{Formula["cpl"].prefix}",
-                            "--with-gsl=#{Formula["gsl"].prefix}",
-                            "--with-erfa=#{Formula["erfa"].prefix}",
-                            "--with-curl=#{Formula["curl"].prefix}"
+      system "./configure",
+             "--prefix=#{prefix}",
+             "--with-cpl=#{Formula["cpl"].prefix}",
+             "--with-gsl=#{Formula["gsl"].prefix}",
+             "--with-erfa=#{Formula["erfa"].prefix}",
+             "--with-curl=#{Formula["curl"].prefix}"
       system "make", "install"
     end
   end
