@@ -14,10 +14,10 @@ class Edps < Formula
   end
 
   bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/edps-1.4.2"
-    sha256 cellar: :any,                 arm64_sonoma: "b5da359510dac48a21401bed103ec61db5c0faf4116140a9b9d1f4eaa999fc23"
-    sha256 cellar: :any,                 ventura:      "ddaf9c68b545c4b5e55747458ea12785d1475b0c75afb05da68c6a1d3ef4edab"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "8f28280cd2c4af37f3e2240b4c0f10abf3722d99021df4ce79cefa8d90d46680"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/edps-1.4.2_1"
+    sha256 cellar: :any,                 arm64_sonoma: "9ec05e7beb37f05e57609d2f38da4da27f0f9bbff9ee594709a4a08baf38b1f5"
+    sha256 cellar: :any,                 ventura:      "aa1f72ba03af32629d0d2e33db03553cbade9cddeba36ae57ab8b2fb664db389"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "1089027414def852e0b1df88f4f9f8bd06313f0336e5e3f597c500ef1ac8596d"
   end
 
   depends_on "cmake"
