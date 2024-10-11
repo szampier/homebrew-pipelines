@@ -10,6 +10,13 @@ class EsopipeDetmonRecipes < Formula
     regex(/href=.*?detmon-kit-(\d+(?:[.-]\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esopipe-detmon-recipes-1.3.14"
+    sha256 cellar: :any,                 arm64_sonoma: "41c910e6946bebb1ee06fcf9f69169f2904bcf144b8b8cd1d58defa710307638"
+    sha256 cellar: :any,                 ventura:      "47c3618bf7cbdcedd709486ed9fff773ec468d905519bfe2cf9637bc1e8ea56c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "94763bfcc7902823212071c347ae17899ebefcc26577cbe05d2d45e43576f0bc"
+  end
+
   depends_on "pkg-config" => :build
   depends_on "cpl"
   depends_on "curl"
