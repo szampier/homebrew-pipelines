@@ -19,8 +19,8 @@ class Esorex < Formula
     sha256 x86_64_linux:  "e487541c1fc207f8e4bea9e11c87e85d9b09efbe185f3e0148b099f240adec22"
   end
 
-  depends_on "cpl"
-  depends_on "gsl"
+  depends_on "esolib-cpl"
+  depends_on "esolib-gsl"
   depends_on "libffi"
 
   def install
@@ -28,8 +28,8 @@ class Esorex < Formula
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--prefix=#{prefix}",
-                          "--with-cpl=#{Formula["cpl"].prefix}",
-                          "--with-gsl=#{Formula["gsl"].prefix}",
+                          "--with-cpl=#{Formula["esolib-cpl"].prefix}",
+                          "--with-gsl=#{Formula["esolib-gsl"].prefix}",
                           "--with-libffi=#{Formula["libffi"].prefix}",
                           "--with-included-ltdl"
     system "make", "install"
