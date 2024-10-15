@@ -11,11 +11,11 @@ class CplAT732 < Formula
     regex(/href=.*?cpl[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  keg_only :versioned_formula
+
   depends_on "esolib-cfitsio"
   depends_on "esolib-fftw"
   depends_on "esolib-wcslib"
-
-  keg_only :versioned_formula
 
   def install
     system "./configure", "--disable-debug",
