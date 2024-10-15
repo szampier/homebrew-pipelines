@@ -15,7 +15,7 @@ class CplAT732 < Formula
   depends_on "esolib-fftw"
   depends_on "esolib-wcslib"
 
-  conflicts_with "gdal", because: "both install cpl_error.h"
+  keg_only :versioned_formula
 
   def install
     system "./configure", "--disable-debug",
