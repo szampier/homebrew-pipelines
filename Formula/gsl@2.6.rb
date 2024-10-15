@@ -8,9 +8,10 @@ class GslAT26 < Formula
 
   bottle do
     root_url "https://github.com/szampier/homebrew-pipelines/releases/download/gsl@2.6-2.6"
-    sha256 cellar: :any,                 arm64_sonoma: "d0aa3c43f5d49006cd5052a0ad75fe59a9709f4599e048a47d2f6b488a269940"
-    sha256 cellar: :any,                 ventura:      "864516dfd6bbeac1718774344f37bd7fee8798ca68b56b8af68a559f62ee9297"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "c48814999f65c1165bdfcb42e6cd561528a8f1ff39d19c9c09822073a919dfdb"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sonoma: "6c4da3be257a2779c094a0c691c844fb22fab23ef92bd1d723ca0aff09cc98c1"
+    sha256 cellar: :any,                 ventura:      "d46385f079db921e762037d5e3f255eb5bae97e866a3406911731a88e516c20d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "ba75026abbdd52766cefcb7bda7c1df947e1b65937d3a71d05a9853a9bf38319"
   end
 
   keg_only :versioned_formula
