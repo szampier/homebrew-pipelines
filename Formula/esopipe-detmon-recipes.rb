@@ -22,11 +22,11 @@ class EsopipeDetmonRecipes < Formula
   end
 
   depends_on "pkg-config" => :build
-  depends_on "cpl"
+  depends_on "esolib-cpl"
   depends_on "curl"
   depends_on "erfa"
   depends_on "esorex"
-  depends_on "gsl"
+  depends_on "esolib-gsl"
 
   def install
     version_norevision = version.to_s[/(\d+(?:[.]\d+)+)/i, 1]
@@ -34,8 +34,8 @@ class EsopipeDetmonRecipes < Formula
     cd "detmon-#{version_norevision}" do
       system "./configure",
              "--prefix=#{prefix}",
-             "--with-cpl=#{Formula["cpl"].prefix}",
-             "--with-gsl=#{Formula["gsl"].prefix}",
+             "--with-cpl=#{Formula["esolib-cpl"].prefix}",
+             "--with-gsl=#{Formula["esolib-gsl"].prefix}",
              "--with-erfa=#{Formula["erfa"].prefix}",
              "--with-curl=#{Formula["curl"].prefix}"
       system "make", "install"
