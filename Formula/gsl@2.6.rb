@@ -13,6 +13,8 @@ class GslAT26 < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "c48814999f65c1165bdfcb42e6cd561528a8f1ff39d19c9c09822073a919dfdb"
   end
 
+  keg_only :versioned_formula
+
   def install
     ENV.deparallelize
     system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}"
