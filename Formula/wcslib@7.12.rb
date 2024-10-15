@@ -11,6 +11,13 @@ class WcslibAT712 < Formula
     regex(/href=.*?wcslib[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/wcslib@7.12-7.12_1"
+    sha256 cellar: :any,                 arm64_sonoma: "7b34cb02810526dabc3fcbaca5ba0afe8a52e1f03fd185096f3a0f6dea9ecd8b"
+    sha256 cellar: :any,                 ventura:      "c07fc5f0dee5e2d38bfe4aec079606e72d364557bce267c6680f712a9172ca38"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "e2e809aad8329e6b694080576d5e1847fcdc18b3834cf6eae57ca2b189e36394"
+  end
+
   depends_on "esolib-cfitsio"
 
   def install
