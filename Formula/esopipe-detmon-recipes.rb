@@ -22,11 +22,11 @@ class EsopipeDetmonRecipes < Formula
   end
 
   depends_on "pkg-config" => :build
-  depends_on "esolib-cpl"
   depends_on "curl"
   depends_on "erfa"
-  depends_on "esorex"
+  depends_on "esolib-cpl"
   depends_on "esolib-gsl"
+  depends_on "esorex"
 
   def install
     version_norevision = version.to_s[/(\d+(?:[.]\d+)+)/i, 1]
