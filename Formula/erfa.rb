@@ -12,12 +12,10 @@ class Erfa < Formula
   end
 
   bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/erfa-2.0.1_1"
-    sha256 cellar: :any,                 arm64_sonoma:  "e3c82f4a56c0b19d16dbb11f2a70a22a4c1277200af6b333c9bed1dc2d8f634e"
-    sha256 cellar: :any,                 arm64_ventura: "fb9faa48c2e46d4bfbc0460ae415a5cbe4aeb8b3b125668c7f0354e73fc4511b"
-    sha256 cellar: :any,                 ventura:       "422612ebeac5c00d1ad8305db82a9314b5975a893c3726c89b11cc5ef79d20e3"
-    sha256 cellar: :any,                 monterey:      "b29886a026a94875740752052defdf0e821fffd8607cc5cfba23be576051acb2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cca66979fd6315a3485f92804c4407143be437c815e7fa3afdb5f61fc5cb7d7c"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/erfa-2.0.1_2"
+    sha256 cellar: :any,                 arm64_sonoma: "a286e513d8c87a0ba57de9343e262d6bf574a6ab6d75e7c098fffa0d0f0bc5a3"
+    sha256 cellar: :any,                 ventura:      "918d87ef2a98dc79291fe2a6d15824fe5fedafb55d0d7e5b00fd314910dd3ff5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "26e3678243e35a038ab7b4efb412346206a6cb55d695ad78d8172726ca00da0c"
   end
 
   def install
