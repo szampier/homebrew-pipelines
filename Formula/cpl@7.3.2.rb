@@ -20,18 +20,18 @@ class CplAT732 < Formula
 
   keg_only :versioned_formula
 
-  depends_on "esolib-cfitsio"
-  depends_on "esolib-fftw"
-  depends_on "esolib-wcslib"
+  depends_on "cfitsio@4.2.0"
+  depends_on "fftw@3.3.9"
+  depends_on "wcslib@7.12"
 
   def install
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--prefix=#{prefix}",
-                          "--with-cfitsio=#{Formula["esolib-cfitsio"].prefix}",
-                          "--with-fftw=#{Formula["esolib-fftw"].prefix}",
-                          "--with-wcslib=#{Formula["esolib-wcslib"].prefix}"
+                          "--with-cfitsio=#{Formula["cfitsio@4.2.0"].prefix}",
+                          "--with-fftw=#{Formula["fftw@3.3.9"].prefix}",
+                          "--with-wcslib=#{Formula["wcslib@7.12"].prefix}"
     system "make", "install"
   end
 
