@@ -13,9 +13,10 @@ class CplAT732 < Formula
 
   bottle do
     root_url "https://github.com/szampier/homebrew-pipelines/releases/download/cpl@7.3.2-7.3.2_1"
-    sha256 cellar: :any,                 arm64_sonoma: "05c1a59beb61cbd4aec135153e7057385e61dc85c0701ce8d9690f2ad61f450d"
-    sha256 cellar: :any,                 ventura:      "b02832897d5d3acccc6317a85f866bdeaa56cc7ae55af64fcc62c81c89253a4d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "a9d815ed48e7d440e20e80169e4239d8b776d0853907efb62127d89dfa060fd2"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sonoma: "e155b1fe2ff1b117fc1b955c1e1d6c2c4ffc473371b0baa38efffc3c7eb025f9"
+    sha256 cellar: :any,                 ventura:      "19e17c5d6d49a0a88002439f6b07eafb7e83536e31936fd7f530898346855e15"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "83d1f21ddc7a1d2a62386a61ff290f0e4fe8a290079f064e9cbb89d3811b2471"
   end
 
   keg_only :versioned_formula
