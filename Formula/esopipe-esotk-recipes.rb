@@ -37,6 +37,6 @@ class EsopipeEsotkRecipes < Formula
 
   test do
     version_norevision = version.to_s[/(\d+(?:[.]\d+)+)/i, 1]
-    assert_match "esotk_opt_lg -- version #{version_norevision}", shell_output("#{HOMEBREW_PREFIX}/bin/esorex --man-page esotk_opt_lg")
+    assert_match "esotk_spectrum1d_combine -- version #{version_norevision}", shell_output("#{HOMEBREW_PREFIX}/bin/esorex --man-page esotk_spectrum1d_combine")
   end
 end
