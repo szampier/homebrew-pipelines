@@ -12,10 +12,10 @@ class EsopipeEsotkRecipes < Formula
   end
 
   bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esopipe-esotk-recipes-0.9.7-1"
-    sha256 cellar: :any,                 arm64_sonoma: "b177eae040dd7eabe84ada530585d293791ccee34331aa85b5de9cfcdb83598d"
-    sha256 cellar: :any,                 ventura:      "f4c018054ab4d456b88a49c8db66a68f9aeb321ec9e2e6c9b26d66214c26b507"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "eecf2e2f050a57cf81e888269cc7b3bccad49fe557c5bee3c46e5bbcdf6a69a3"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esopipe-esotk-recipes-0.9.7-1_1"
+    sha256 cellar: :any,                 arm64_sonoma: "c7709bbebdc05685136b2edc24b4da58927843fc98329bf8c531d10d88b36008"
+    sha256 cellar: :any,                 ventura:      "508820d79111e09d66f732a99fca464726bbc1961291db032e10b01f0080bb76"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "60b2c7dcf2480ea71401012a877c3be9f8f2869630d506264acd08c796e514f7"
   end
 
   depends_on "pkg-config" => :build
