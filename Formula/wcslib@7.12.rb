@@ -18,14 +18,14 @@ class WcslibAT712 < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "e2e809aad8329e6b694080576d5e1847fcdc18b3834cf6eae57ca2b189e36394"
   end
 
-  depends_on "esolib-cfitsio"
+  depends_on "cfitsio@4.2.0"
 
   def install
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
-                          "--with-cfitsiolib=#{Formula["esolib-cfitsio"].opt_lib}",
-                          "--with-cfitsioinc=#{Formula["esolib-cfitsio"].opt_include}",
+                          "--with-cfitsiolib=#{Formula["cfitsio@4.2.0"].opt_lib}",
+                          "--with-cfitsioinc=#{Formula["cfitsio@4.2.0"].opt_include}",
                           "--without-pgplot",
                           "--disable-fortran"
     system "make", "install"
