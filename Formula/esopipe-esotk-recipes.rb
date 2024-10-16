@@ -18,6 +18,10 @@ class EsopipeEsotkRecipes < Formula
   depends_on "gsl@2.6"
 
   def install
+    ENV.prepend "LDFLAGS", "-L#{Formula["fftw@3.3.9"].opt_lib}"
+    ENV.prepend "LDFLAGS", "-L#{Formula["wcslib@7.12"].opt_lib}"
+    ENV.prepend "LDFLAGS", "-L#{Formula["cfitsio@4.2.0"].opt_lib}"
+
     version_norevision = version.to_s[/(\d+(?:[.]\d+)+)/i, 1]
     system "tar", "xf", "esotk-#{version_norevision}.tar.gz"
     cd "esotk-#{version_norevision}" do
