@@ -10,31 +10,24 @@ class EsopipeErisRecipes < Formula
     regex(/href=.*?eris-kit-(\d+(?:[.-]\d+)+)\.t/i)
   end
 
-  bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esopipe-eris-recipes-1.6.0"
-    sha256 cellar: :any,                 arm64_sonoma: "95d3a88c6a4d26a0caf80757d97932fefdadda76d0b99b803ca513ca22190f40"
-    sha256 cellar: :any,                 ventura:      "17baef1caffa58ffbd187c9f41cfa8d5d66f3f4f2b537f1fde8025960a1c9a66"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "7fdebb1826163a9ada9108a8e0c1b8b15784cb957a742667aa5627b0fb6be562"
-  end
-
   depends_on "pkg-config" => :build
-  depends_on "cfitsio"
-  depends_on "cpl"
+  depends_on "cfitsio@4.2.0"
+  depends_on "cpl@7.3.2"
   depends_on "curl"
   depends_on "erfa"
   depends_on "esorex"
-  depends_on "gsl"
+  depends_on "gsl@2.6"
 
   def install
     version_norevision = version.to_s[/(\d+(?:[.]\d+)+)/i, 1]
     system "tar", "xf", "eris-#{version_norevision}.tar.gz"
     cd "eris-#{version_norevision}" do
       system "./configure", "--prefix=#{prefix}",
-             "--with-cfitsio=#{Formula["cfitsio"].prefix}",
-             "--with-cpl=#{Formula["cpl"].prefix}",
+             "--with-cfitsio=#{Formula["cfitsio@4.2.0"].prefix}",
+             "--with-cpl=#{Formula["cpl@7.3.2"].prefix}",
              "--with-erfa=#{Formula["erfa"].prefix}",
              "--with-curl=#{Formula["curl"].prefix}",
-             "--with-gsl=#{Formula["gsl"].prefix}"
+             "--with-gsl=#{Formula["gsl@2.6"].prefix}"
       system "make", "install"
     end
   end

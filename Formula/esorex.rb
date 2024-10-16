@@ -10,17 +10,8 @@ class Esorex < Formula
     regex(/href=.*?esorex[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
-  bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esorex-3.13.9"
-    sha256 arm64_sonoma:  "f968a7ec7fb7dad6a2d5f95ad6bec6706a6f879328ed898aa5946f3b996fdd44"
-    sha256 arm64_ventura: "52a347cd9efe49f07586f0b1726cfbec0f832c52ce6185797f7b8e598ab7d320"
-    sha256 ventura:       "4587938df73c6fab861accaec3f5f8162b25aba729ffe3c2c52f95335cf526e7"
-    sha256 monterey:      "2173135b587470e36a3835cde8a2847a24d710c1794a451ac2c29ed23a1c0bce"
-    sha256 x86_64_linux:  "e487541c1fc207f8e4bea9e11c87e85d9b09efbe185f3e0148b099f240adec22"
-  end
-
-  depends_on "cpl"
-  depends_on "gsl"
+  depends_on "cpl@7.3.2"
+  depends_on "gsl@2.6"
   depends_on "libffi"
 
   def install
@@ -28,8 +19,8 @@ class Esorex < Formula
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--prefix=#{prefix}",
-                          "--with-cpl=#{Formula["cpl"].prefix}",
-                          "--with-gsl=#{Formula["gsl"].prefix}",
+                          "--with-cpl=#{Formula["cpl@7.3.2"].prefix}",
+                          "--with-gsl=#{Formula["gsl@2.6"].prefix}",
                           "--with-libffi=#{Formula["libffi"].prefix}",
                           "--with-included-ltdl"
     system "make", "install"

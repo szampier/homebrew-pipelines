@@ -10,20 +10,13 @@ class EsopipeForsRecipes < Formula
     regex(/href=.*?fors-kit-(\d+(?:[.-]\d+)+)\.t/i)
   end
 
-  bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esopipe-fors-recipes-5.6.5-7"
-    sha256 arm64_sonoma: "7536944581f861adbc37e696edeff48327f8e5e11fd6628debbcea7a1b96286c"
-    sha256 ventura:      "187989ce924e71b8e6de0a611e52519243d0fc1af4b2a60131ea202449d70808"
-    sha256 x86_64_linux: "75ab13f461cc8cb4296caf1f3aba8c915b90a272d25c39fb6f05b5f097b49572"
-  end
-
-  depends_on "cfitsio"
-  depends_on "cpl"
+  depends_on "pkg-config" => :build
+  depends_on "cfitsio@4.2.0"
+  depends_on "cpl@7.3.2"
   depends_on "curl"
   depends_on "erfa"
   depends_on "esorex"
-  depends_on "gsl"
-  depends_on "pkg-config"
+  depends_on "gsl@2.6"
   depends_on "telluriccorr"
 
   def install
@@ -31,11 +24,11 @@ class EsopipeForsRecipes < Formula
     system "tar", "xf", "fors-#{version_norevision}.tar.gz"
     cd "fors-#{version_norevision}" do
       system "./configure", "--prefix=#{prefix}",
-             "--with-cfitsio=#{Formula["cfitsio"].prefix}",
-             "--with-cpl=#{Formula["cpl"].prefix}",
+             "--with-cfitsio=#{Formula["cfitsio@4.2.0"].prefix}",
+             "--with-cpl=#{Formula["cpl@7.3.2"].prefix}",
              "--with-erfa=#{Formula["erfa"].prefix}",
              "--with-telluriccorr=#{Formula["telluriccorr"].prefix}",
-             "--with-gsl=#{Formula["gsl"].prefix}",
+             "--with-gsl=#{Formula["gsl@2.6"].prefix}",
              "--with-curl=#{Formula["curl"].prefix}"
       system "make", "install"
     end

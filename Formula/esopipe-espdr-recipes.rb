@@ -10,27 +10,20 @@ class EsopipeEspdrRecipes < Formula
     regex(/href=.*?espdr-kit-(\d+(?:[.-]\d+)+)\.t/i)
   end
 
-  bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esopipe-espdr-recipes-3.2.0"
-    sha256 arm64_sonoma: "f21fda22f495f5e8bfde00e4f04ad459da7ce8f9c2df8ed03ff811a3e629e1ba"
-    sha256 ventura:      "4544b3be102711ff53a623ca09e66dab99b1863f4668decba06890ab7b968909"
-    sha256 x86_64_linux: "84b987a4378905f16ff69e03277e2ab97637f908d6676af0a102d031358d00a1"
-  end
-
-  depends_on "cpl"
+  depends_on "pkg-config" => :build
+  depends_on "cpl@7.3.2"
   depends_on "curl"
   depends_on "erfa"
   depends_on "esorex"
-  depends_on "gsl"
-  depends_on "pkg-config"
+  depends_on "gsl@2.6"
 
   def install
     version_norevision = version.to_s[/(\d+(?:[.]\d+)+)/i, 1]
     system "tar", "xf", "espdr-#{version_norevision}.tar.gz"
     cd "espdr-#{version_norevision}" do
       system "./configure", "--prefix=#{prefix}",
-                            "--with-cpl=#{Formula["cpl"].prefix}",
-                            "--with-gsl=#{Formula["gsl"].prefix}",
+                            "--with-cpl=#{Formula["cpl@7.3.2"].prefix}",
+                            "--with-gsl=#{Formula["gsl@2.6"].prefix}",
                             "--with-erfa=#{Formula["erfa"].prefix}",
                             "--with-curl=#{Formula["curl"].prefix}"
       system "make", "install"
