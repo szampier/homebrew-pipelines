@@ -10,16 +10,9 @@ class EsopipeKmosRecipes < Formula
     regex(/href=.*?kmos-kit-(\d+(?:[.-]\d+)+)\.t/i)
   end
 
-  bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esopipe-kmos-recipes-4.4.4"
-    sha256 cellar: :any,                 arm64_sonoma: "2583d23d42658282a8329da92128c5ef3e924b7dd80ae9cedc148c0260ece301"
-    sha256 cellar: :any,                 ventura:      "3341396035ca4ba42abdb7736a5d1245ee7957f74bdf67f643ec21b51018d335"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "641468cedca4d4045441514832db212f95b54db908ebe008d72a12009e0a9bd5"
-  end
-
-  depends_on "cpl"
+  depends_on "pkg-config" => :build
+  depends_on "esolib-cpl"
   depends_on "esorex"
-  depends_on "pkg-config"
   depends_on "telluriccorr"
 
   def install
@@ -30,7 +23,7 @@ class EsopipeKmosRecipes < Formula
       # system "curl", "-O", "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
       # system "patch", "configure", "configure-big_sur.diff"
       system "./configure", "--prefix=#{prefix}",
-                            "--with-cpl=#{Formula["cpl"].prefix}",
+                            "--with-cpl=#{Formula["esolib-cpl"].prefix}",
                             "--with-telluriccorr=#{Formula["telluriccorr"].prefix}"
       system "make", "install"
       rm bin/"kmos_calib.py"

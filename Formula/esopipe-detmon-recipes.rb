@@ -14,19 +14,12 @@ class EsopipeDetmonRecipes < Formula
     regex(/href=.*?detmon-kit-(\d+(?:[.-]\d+)+)\.t/i)
   end
 
-  bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esopipe-detmon-recipes-1.3.14"
-    sha256 cellar: :any,                 arm64_sonoma: "41c910e6946bebb1ee06fcf9f69169f2904bcf144b8b8cd1d58defa710307638"
-    sha256 cellar: :any,                 ventura:      "47c3618bf7cbdcedd709486ed9fff773ec468d905519bfe2cf9637bc1e8ea56c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "94763bfcc7902823212071c347ae17899ebefcc26577cbe05d2d45e43576f0bc"
-  end
-
   depends_on "pkg-config" => :build
-  depends_on "cpl"
   depends_on "curl"
   depends_on "erfa"
+  depends_on "esolib-cpl"
+  depends_on "esolib-gsl"
   depends_on "esorex"
-  depends_on "gsl"
 
   def install
     version_norevision = version.to_s[/(\d+(?:[.]\d+)+)/i, 1]
@@ -34,8 +27,8 @@ class EsopipeDetmonRecipes < Formula
     cd "detmon-#{version_norevision}" do
       system "./configure",
              "--prefix=#{prefix}",
-             "--with-cpl=#{Formula["cpl"].prefix}",
-             "--with-gsl=#{Formula["gsl"].prefix}",
+             "--with-cpl=#{Formula["esolib-cpl"].prefix}",
+             "--with-gsl=#{Formula["esolib-gsl"].prefix}",
              "--with-erfa=#{Formula["erfa"].prefix}",
              "--with-curl=#{Formula["curl"].prefix}"
       system "make", "install"
