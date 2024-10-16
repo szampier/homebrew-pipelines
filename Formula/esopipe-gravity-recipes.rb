@@ -11,6 +11,13 @@ class EsopipeGravityRecipes < Formula
     regex(/href=.*?gravity-kit-(\d+(?:[.-]\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esopipe-gravity-recipes-1.6.7-2_1"
+    sha256 cellar: :any,                 arm64_sonoma: "64bb4b1373f9d638fd40f752f0d0eaf835dae7f33ed66d4635166f817b91e11a"
+    sha256 cellar: :any,                 ventura:      "add20304203f1b1fd25e5ed1409c917db1a59a8c649a1d5894a0ba8d874291da"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "44dd9f609a57787a892a37adf06e63bde262a40ad07b82ed4a89ca676d4b1417"
+  end
+
   depends_on "pkg-config" => :build
   depends_on "cpl@7.3.2"
   depends_on "curl"
