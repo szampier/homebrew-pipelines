@@ -13,9 +13,10 @@ class WcslibAT712 < Formula
 
   bottle do
     root_url "https://github.com/szampier/homebrew-pipelines/releases/download/wcslib@7.12-7.12_1"
-    sha256 cellar: :any,                 arm64_sonoma: "7b34cb02810526dabc3fcbaca5ba0afe8a52e1f03fd185096f3a0f6dea9ecd8b"
-    sha256 cellar: :any,                 ventura:      "c07fc5f0dee5e2d38bfe4aec079606e72d364557bce267c6680f712a9172ca38"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "e2e809aad8329e6b694080576d5e1847fcdc18b3834cf6eae57ca2b189e36394"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sonoma: "d1eed8ddf86522e3c420b865c15a539631569159665d91e8fe68f148eff0ac2c"
+    sha256 cellar: :any,                 ventura:      "76373cf76de8c2a3d786f06089c1071e8ad68cffb1d3df05a26142777b724604"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "a13b36b5c9dbc99dbb0435bb8381a028678e9d2b4881e14972fe10729aaca116"
   end
 
   depends_on "cfitsio@4.2.0"
