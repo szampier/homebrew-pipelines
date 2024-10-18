@@ -41,6 +41,7 @@ class EsopipeCr2resRecipes < Formula
   end
 
   test do
-    system "true"
+    version_norevision = version.to_s[/(\d+(?:[.]\d+)+)/i, 1]
+    assert_match "cr2res_cal_dark -- version #{version_norevision}", shell_output("#{HOMEBREW_PREFIX}/bin/esorex --man-page cr2res_cal_dark")
   end
 end
