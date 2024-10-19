@@ -37,7 +37,8 @@ class EsopipeSpherRecipes < Formula
   end
 
   test do
-    version_norevision = version.to_s[/(\d+(?:[.]\d+)+)/i, 1]
-    assert_match "sph_zpl_master_dark -- version", shell_output("#{HOMEBREW_PREFIX}/bin/esorex --man-page sph_zpl_master_dark")
+    # version_norevision = version.to_s[/(\d+(?:[.]\d+)+)/i, 1]
+    assert_match "sph_zpl_master_dark -- version",
+                 shell_output("#{HOMEBREW_PREFIX}/bin/esorex --man-page sph_zpl_master_dark")
   end
 end
