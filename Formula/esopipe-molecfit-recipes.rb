@@ -28,6 +28,6 @@ class EsopipeMolecfitRecipes < Formula
 
   test do
     version_norevision = version.to_s[/(\d+(?:[.]\d+)+)/i, 1]
-    assert_match "molecfit_dark -- version #{version_norevision}", shell_output("#{HOMEBREW_PREFIX}/bin/esorex --man-page molecfit_dark")
+    assert_match "molecfit_model -- version #{version_norevision}", shell_output("#{HOMEBREW_PREFIX}/bin/esorex --man-page molecfit_model")
   end
 end
