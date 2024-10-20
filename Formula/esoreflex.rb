@@ -10,7 +10,7 @@ class Esoreflex < Formula
     regex(/href=.*?esoreflex-(\d+(?:[.-]\d+)+)\.t/i)
   end
 
-  depends_on "cpl"
+  depends_on "cpl@7.3.2"
   depends_on "esorex"
   depends_on "openjdk@11"
   depends_on "python@3.9"
@@ -91,6 +91,7 @@ class Esoreflex < Formula
     rm_r(pkgshare/"common/src")
     rm_r(pkgshare/"ptolemy/src/bin/macContents/Contents/MacOS/JavaApplicationStub")
     rm_r(pkgshare/"build-area/resources/installer/launch4j")
+    system "#{HOMEBREW_PREFIX}/bin/python3.9", "-m", "pip", "install", "astropy", "matplotlib"
   end
 
   test do
