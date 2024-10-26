@@ -1,3 +1,5 @@
 esopipe-espdr-recipes
 esopipe-uves-recipes
 esopipe-kmos-recipes
+esopipe-gravity-recipes
+esopipe-spher-recipes
