@@ -1,5 +1,5 @@
-szampier/pipelines/esopipe-espdr-recipes
-szampier/pipelines/esopipe-uves-recipes
-szampier/pipelines/esopipe-kmos-recipes
-szampier/pipelines/esopipe-gravity-recipes
-szampier/pipelines/esopipe-spher-recipes
+esopipe-espdr-recipes
+esopipe-uves-recipes
+esopipe-kmos-recipes
+esopipe-gravity-recipes
+esopipe-spher-recipes
