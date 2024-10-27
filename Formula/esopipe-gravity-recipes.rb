@@ -11,10 +11,10 @@ class EsopipeGravityRecipes < Formula
   end
 
   bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esopipe-gravity-recipes-1.6.7-2_1"
-    sha256 cellar: :any,                 arm64_sonoma: "64bb4b1373f9d638fd40f752f0d0eaf835dae7f33ed66d4635166f817b91e11a"
-    sha256 cellar: :any,                 ventura:      "add20304203f1b1fd25e5ed1409c917db1a59a8c649a1d5894a0ba8d874291da"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "44dd9f609a57787a892a37adf06e63bde262a40ad07b82ed4a89ca676d4b1417"
+    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esopipe-gravity-recipes-1.7.0-1"
+    sha256 cellar: :any,                 arm64_sonoma: "c176e56c591943ec85742b212650164edc4fca76b26cb3ce3c3e4962e1f79262"
+    sha256 cellar: :any,                 ventura:      "d1128ff6d91468c9ee35a89b229318ccf06bc4f29a003e53c0f14ab4c00e7dab"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "96aeaea83719476ef30ebc202b12dc129ef83ac343b819735d9c4c1b41e9853c"
   end
 
   depends_on "pkg-config" => :build
